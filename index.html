@@ -1,0 +1,583 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>전시 안내 — 토큰이 없어</title><meta name="description" content="전시 소개, 프로그램, 작품과 관람 안내">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2378fa69'/%3E%3Cpath d='M8 8h16v5H13v3h9v4h-9v3h11v4H8z'/%3E%3C/svg%3E">
+<style>
+:root{--paper:#f4f4f0;--ink:#121212;--green:#79fa6c;--line:#222}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,'Apple SD Gothic Neo','Malgun Gothic',sans-serif}button{font:inherit;color:inherit;cursor:pointer}main{width:calc(100% - 260px);min-height:100dvh;padding:38px 5vw 54px}.masthead{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:20px;font-size:14px;font-weight:700;letter-spacing:.06em}.home-link{border:0;background:none;padding:8px 0;font-weight:800}.edition{font-size:12px}.view[hidden]{display:none}.view{animation:appear .25s ease-out}@keyframes appear{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}.home{min-height:calc(100dvh - 150px);display:flex;flex-direction:column;justify-content:center;position:relative}.eyebrow{font-size:14px;letter-spacing:.12em;font-weight:700;margin:36px 0 24px}h1{font-size:clamp(48px,6.6vw,106px);line-height:1.14;letter-spacing:-.055em;margin:0;font-weight:900;word-break:keep-all}mark{background:var(--green);padding:0 .06em;color:inherit}.dates{display:flex;flex-wrap:wrap;align-items:center;gap:18px;font-size:17px;font-weight:700;margin-top:45px}.date-line{height:1px;width:55px;background:var(--ink)}.home-bottom{margin-top:55px;color:#5c5c58;font-size:14px}.section-title{font-size:clamp(38px,4.6vw,66px);line-height:1.15;margin:8px 0 30px;letter-spacing:-.035em}.intro{font-size:clamp(22px,2.6vw,34px);line-height:1.5;max-width:760px;word-break:keep-all;margin:0 0 22px}.body-copy{font-size:17px;line-height:1.9;max-width:690px;color:#494945;word-break:keep-all}figure{margin:38px 0 0}figure img{display:block;width:100%;height:auto;border:1px solid #bcbcb6}figcaption{font-size:14px;color:#62625c;margin-top:12px}.info{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 30px;margin-top:38px}.info div{border-top:1px solid #aaa;padding:18px 0}.info dt{font-size:14px;color:#666;margin-bottom:10px}.info dd{margin:0;font-size:17px;line-height:1.6}.rows{margin:38px 0}.row{border-top:1px solid #999;padding:25px 0;display:grid;grid-template-columns:52px 1fr;gap:12px}.row:last-child{border-bottom:1px solid #999}.num{font-size:14px;padding-top:5px}.row h3{font-size:24px;margin:0 0 12px}.row p{font-size:17px;line-height:1.8;margin:0;color:#555}.notice{border-left:4px solid var(--green);padding:12px 18px;font-size:16px;line-height:1.7;background:#eaeae5;margin-top:32px}.sidebar{position:fixed;right:0;top:0;bottom:0;width:260px;background:var(--green);border-left:1px solid var(--line);display:flex;flex-direction:column}.nav-top{height:85px;flex-shrink:0;display:flex;justify-content:space-between;align-items:center;padding:0 25px;border-bottom:1px solid var(--line);font-size:12px;letter-spacing:.08em}.nav-top span:last-child{font-size:25px}.nav-buttons{display:flex;flex-direction:column;flex:1}.nav-buttons button{flex:1;min-height:78px;position:relative;border:0;border-bottom:1px solid var(--line);background:none;font-size:clamp(22px,2.5vw,34px);font-weight:900;letter-spacing:-.03em;transition:background .15s}.nav-buttons button:last-child{border-bottom:0}.nav-buttons .menu-label{display:inline-block;transition:transform .18s ease}@media(hover:hover){.nav-buttons button:hover .menu-label{transform:scale(1.08)}}.nav-buttons button[aria-selected="true"]{background:var(--ink);color:var(--green)}.nav-buttons button:focus-visible,.home-link:focus-visible{outline:3px solid #255fff;outline-offset:-6px}.tab-index{position:absolute;left:19px;top:18px;font-size:11px;font-weight:400;letter-spacing:0}.contact-text{font-size:21px;line-height:1.8}.gallery-label{font-size:14px;font-weight:700;letter-spacing:.1em;margin-top:30px}@media(max-width:760px){main{width:100%;padding:24px 22px 125px}.sidebar{top:auto;left:0;right:0;bottom:0;width:100%;height:78px;border-left:0;border-top:1px solid var(--line);z-index:5}.nav-top{display:none}.nav-buttons{flex-direction:row}.nav-buttons button{min-height:76px;font-size:12px;letter-spacing:0;border-bottom:0;border-right:1px solid var(--line);padding:16px 2px 0}.tab-index{left:0;right:0;top:12px;font-size:10px}.nav-buttons button:last-child{border-right:0}.home{min-height:calc(100dvh - 210px)}h1{font-size:clamp(48px,10vw,75px)}.edition{font-size:10px}.dates{font-size:14px;gap:10px}.date-line{width:22px}.info{grid-template-columns:1fr}.section-title{font-size:42px}.intro{font-size:24px}}@media(prefers-reduced-motion:reduce){.view{animation:none}.nav-buttons .menu-label{transition:none}}
+
+
+/* The menu overlays the page, keeping the same five-row layout at every size. */
+:root{--menu-width:15vw}
+main{width:100%;transition:filter .25s ease}
+.menu-toggle{position:fixed;top:24px;right:4.5vw;z-index:30;width:44px;height:44px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;border:0;background:transparent}
+.menu-toggle span{display:block;width:24px;height:2px;background:var(--ink);transition:transform .2s,opacity .2s}
+.masthead{padding-right:56px}
+.sidebar{left:auto;top:0;right:0;bottom:0;width:var(--menu-width);height:100dvh;z-index:20;border-top:0;visibility:hidden;transform:translateX(100%);transition:transform .25s ease,visibility .25s}
+.nav-buttons{flex-direction:column;min-height:0}
+.nav-buttons button{min-height:0;padding:12px 2px;border-right:0;border-bottom:1px solid var(--line);font-size:clamp(10px,2vw,28px);letter-spacing:-.04em}
+.menu-backdrop{position:fixed;inset:0;z-index:10;border:0;background:rgb(255 255 255 / .15);visibility:hidden;opacity:0;transition:opacity .25s,visibility .25s;cursor:default}
+body.menu-open{overflow:hidden}
+body.menu-open main{filter:blur(7px);pointer-events:none;user-select:none}
+body.menu-open .sidebar{visibility:visible;transform:translateX(0)}
+body.menu-open .menu-backdrop{visibility:visible;opacity:1}
+.menu-toggle:focus-visible{outline:3px solid #255fff;outline-offset:2px}
+@media(max-width:760px){main{padding:24px 22px 40px}.menu-toggle{top:16px;right:4.5vw}.home{min-height:calc(100dvh - 130px)}}
+@media(prefers-reduced-motion:reduce){main,.sidebar,.menu-backdrop,.menu-toggle span{transition:none}}
+
+
+/* Reference layout: one exhibition label, no header rule or duplicate date. */
+:root{--paper:#fff}
+main{padding:3vw 4.8vw}
+.home{min-height:calc(100dvh - 6vw);justify-content:flex-start}
+.home>.eyebrow{margin:0 0 5.5vw;font-size:clamp(9px,1.05vw,14px);letter-spacing:0}
+.home .home-link{padding:0;font-size:inherit}
+.home h1{font-size:clamp(28px,6.6vw,106px);line-height:1.14}
+.home .dates{margin-top:auto;padding-top:5.5vw;font-size:clamp(9px,1.05vw,17px);gap:1.4vw;flex-wrap:nowrap}
+.home .date-line{width:6.2vw;background:#999}
+.menu-toggle{top:calc(3vw - 15px);right:4vw}
+@media(max-width:760px){main{padding:3vw 4.8vw}.home{min-height:calc(100dvh - 6vw)}}
+
+
+/* Shared background for the exhibition sections. */
+:root{--about-background:url("background.png")}
+body:has(.about-view:not([hidden])){background:#ededeb}
+main:has(.about-view:not([hidden])){padding:0}
+.about-view{position:relative;min-height:100dvh;isolation:isolate;padding:10.2vh 12.5vw 9.5vh}
+.about-view::before{content:"";position:absolute;inset:0;z-index:-1;background-image:linear-gradient(rgb(255 255 255 / .8),rgb(255 255 255 / .8)),var(--about-background,none);background-size:cover;background-position:center}
+.about-home{position:absolute;left:6.6vw;top:5vh;border:0;background:none;padding:0;width:40px;height:40px}
+.about-home svg{width:100%;height:100%}
+.about-layout{display:grid;grid-template-columns:45fr 50fr;gap:8vw;align-items:start}
+.about-poster{display:block;width:100%;aspect-ratio:449 / 636;object-fit:contain;background:#fff}
+.poster-placeholder{position:relative;padding:3% 3.5%;display:flex;flex-direction:column;justify-content:space-between}
+.poster-title{font-size:clamp(24px,3.65vw,60px);font-weight:900;line-height:1.19;letter-spacing:-.055em}
+.poster-pending{font-size:clamp(10px,.85vw,13px);color:#777;padding-bottom:4%}
+.about-copy{font-size:clamp(12px,.98vw,16px);font-weight:400;line-height:1.4;word-break:normal;overflow-wrap:break-word;text-align:justify;text-justify:inter-character;padding-top:1.8vh}
+.about-copy h2,.about-copy h3{font-size:inherit;margin:0;font-weight:400;letter-spacing:0;line-height:inherit}
+.about-copy p{margin:0 0 1.25em}
+.about-details h2{margin-bottom:1.1em}
+.about-description{margin-top:5.8vh}
+.about-artists{margin-top:4.2vh}
+.about-artists h3{margin-bottom:.2em}
+.artists-pending{color:#666;font-weight:400}
+@media(max-width:760px){.about-view{padding:90px 7vw 40px}.about-home{top:20px;left:6vw;width:30px;height:30px}.about-layout{gap:5vw;grid-template-columns:45fr 50fr}.about-copy{font-size:11px;padding-top:0;line-height:1.4}.about-description{margin-top:25px}.about-artists{margin-top:24px}.poster-title{font-size:3.7vw}}
+@media(max-width:480px){.about-layout{grid-template-columns:1fr;gap:32px}.about-poster{width:80%;margin:auto}.poster-title{font-size:7vw}.about-copy{font-size:14px}.about-view{padding-top:80px}}
+
+
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+body:has(.studio-view:not([hidden])){background:#ededeb}
+main:has(.studio-view:not([hidden])){padding:0}
+.studio-view{position:relative;min-height:100dvh;isolation:isolate}
+.studio-view::before{content:"";position:absolute;inset:0;z-index:-1;background-image:linear-gradient(rgb(255 255 255 / .8),rgb(255 255 255 / .8)),var(--about-background,none);background-size:cover;background-position:center}
+.about-home{display:block;color:inherit}
+.contact-sheet{width:66%;min-height:100dvh;margin:0 auto;background:#fff;padding:13vh 3.5vw 7vh;display:flex;flex-direction:column;gap:3.5vh}
+.contact-row{display:grid;grid-template-columns:24% 51% 25%;align-items:center;gap:0;font-weight:700;font-size:clamp(11px,1.15vw,18px);line-height:1.35}
+.contact-row p{margin:0 0 .45em}
+.contact-row p:last-child{margin-bottom:0}
+.contact-row .contact-work{font-size:clamp(15px,1.9vw,29px);margin:0;padding-right:1vw}
+.contact-links{overflow-wrap:anywhere}
+.works-view{padding:9.4vh 17vw 7vh 20vw}
+.works-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:4.5vw;row-gap:9.5vh;align-items:start}
+.work-card{display:block;color:#555;text-decoration:none;justify-self:center;width:75%;transition:filter .2s}
+.work-card:hover{filter:brightness(.93)}
+.work-card:focus-visible,.work-thumbnails button:focus-visible,.about-home:focus-visible,.works-back:focus-visible{outline:3px solid #255fff;outline-offset:5px}
+.work-image-placeholder{display:flex;aspect-ratio:3/4;width:100%;background:#d7d7d4;align-items:center;justify-content:center;flex-direction:column;font-size:clamp(12px,1.3vw,20px);gap:10px}
+.work-image-placeholder small{font-size:10px;font-weight:400}
+.work-card-2 .work-image-placeholder{aspect-ratio:190/338}
+.work-card-4 .work-image-placeholder{aspect-ratio:212/253}
+.work-card-5,.work-card-6{width:100%}
+.work-card-5 .work-image-placeholder{aspect-ratio:283/212}
+.work-card-6 .work-image-placeholder{aspect-ratio:282/170}
+.work-detail-view{padding:16.5vh 14.3vw 7vh}
+.work-detail-layout{display:grid;grid-template-columns:45fr 55fr;gap:5vw;align-items:start}
+.work-detail-image{aspect-ratio:450/537;background:#d7d7d4;display:flex;align-items:center;justify-content:center;color:#666;font-size:14px;text-align:center}
+.work-detail-image img{width:100%;height:100%;object-fit:contain;display:block}
+.work-thumbnails{display:flex;justify-content:center;gap:7px;margin-top:15px}
+.work-thumbnails button{width:42px;height:42px;border:1px solid #222;background:transparent;padding:0;font-size:11px}
+.work-thumbnails button[aria-pressed="true"]{border:2px solid #121212;background:var(--green)}
+.work-thumbnails img{width:100%;height:100%;object-fit:cover}
+.works-back{display:block;margin:16px auto 0;text-align:center;color:inherit;font-size:12px;text-decoration:none}
+.work-detail-copy{font-size:clamp(12px,1vw,16px);font-weight:700;line-height:1.3;word-break:keep-all}
+.work-detail-copy h2{font-size:inherit;margin:0 0 1.2em}
+.work-detail-copy p{margin:0 0 1.2em}
+.work-description{margin-top:6vh}
+@media(max-width:760px){.contact-sheet{width:72%;padding:90px 3vw 40px;gap:28px}.contact-row{grid-template-columns:24% 45% 31%;font-size:10px}.contact-row .contact-work{font-size:13px}.works-view{padding:95px 8vw 40px}.works-grid{column-gap:5vw;row-gap:50px}.work-card{width:90%}.work-detail-view{padding:100px 7vw 40px}.work-detail-copy{font-size:12px}.work-detail-layout{gap:5vw}}
+@media(max-width:480px){.contact-sheet{width:100%;padding:90px 7vw 35px}.contact-row{grid-template-columns:25% 43% 32%;font-size:10px}.contact-row .contact-work{font-size:12px}.works-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.work-detail-layout{grid-template-columns:1fr;gap:30px}.work-gallery{width:85%;margin:auto}.work-detail-copy{font-size:14px}.work-description{margin-top:28px}}
+
+
+/* Fullscreen reference canvas: 1422 × 800. Scale type and spacing together. */
+:root{--screen-unit:min(.070323488vw,.125dvh);--stage-top:calc((100dvh - 800 * var(--screen-unit)) / 2)}
+.about-view,.studio-view{min-height:100dvh}
+.about-home{top:calc(var(--stage-top) + 23.59 * var(--screen-unit));left:max(8px,calc(50% - 670 * var(--screen-unit)));width:calc(44 * var(--screen-unit));height:calc(44 * var(--screen-unit))}
+.menu-toggle{top:calc(var(--stage-top) + 26 * var(--screen-unit));right:max(8px,calc(50% - 675.76 * var(--screen-unit)));width:calc(44 * var(--screen-unit));height:calc(44 * var(--screen-unit));gap:calc(5 * var(--screen-unit))}
+.menu-toggle span{width:calc(25 * var(--screen-unit));height:calc(2 * var(--screen-unit))}
+.nav-buttons button{font-size:calc(28 * var(--screen-unit))}
+.about-view{padding:calc(var(--stage-top) + 82 * var(--screen-unit)) 0 calc(77 * var(--screen-unit))}
+.about-layout{width:calc(1044 * var(--screen-unit));margin:auto;grid-template-columns:449fr 481fr;gap:calc(114 * var(--screen-unit))}
+.about-poster{width:100%;margin:0}
+.poster-title{font-size:calc(55 * var(--screen-unit))}
+.poster-pending{font-size:calc(12 * var(--screen-unit))}
+.about-copy{font-size:calc(14 * var(--screen-unit));line-height:1.4;padding-top:calc(16 * var(--screen-unit))}
+.about-description{margin-top:calc(46 * var(--screen-unit))}
+.about-artists{margin-top:calc(32 * var(--screen-unit))}
+.contact-sheet{width:calc(934 * var(--screen-unit));min-height:100dvh;padding:calc(var(--stage-top) + 120 * var(--screen-unit)) calc(50 * var(--screen-unit)) calc(56 * var(--screen-unit));gap:0;display:grid;grid-template-rows:repeat(7,calc(82 * var(--screen-unit))) calc(50 * var(--screen-unit));align-content:start}
+.contact-row{grid-template-columns:222fr 464fr 148fr;gap:0;font-size:calc(16 * var(--screen-unit));align-items:start;line-height:1.35}
+.contact-row p{margin-bottom:calc(8 * var(--screen-unit))}
+.contact-row .contact-work{font-size:calc(28 * var(--screen-unit));padding-top:calc(5 * var(--screen-unit));padding-right:calc(12 * var(--screen-unit))}
+.works-view{padding:calc(var(--stage-top) + 75 * var(--screen-unit)) 0 calc(54 * var(--screen-unit))}
+.works-grid{display:block;position:relative;width:calc(885 * var(--screen-unit));height:calc(666 * var(--screen-unit));margin:0 auto;transform:translateX(calc(14 * var(--screen-unit)))}
+.work-card{position:absolute;width:calc(212 * var(--screen-unit));margin:0}
+.work-card-1{left:0;top:0}.work-card-2{left:calc(316 * var(--screen-unit));top:0;width:calc(190 * var(--screen-unit))}.work-card-3{left:calc(650 * var(--screen-unit));top:0}
+.work-card-4{left:0;top:calc(413 * var(--screen-unit))}.work-card-5{left:calc(276 * var(--screen-unit));top:calc(413 * var(--screen-unit));width:calc(283 * var(--screen-unit))}.work-card-6{left:calc(603 * var(--screen-unit));top:calc(413 * var(--screen-unit));width:calc(282 * var(--screen-unit))}
+.work-image-placeholder{font-size:calc(18 * var(--screen-unit));gap:calc(10 * var(--screen-unit))}.work-image-placeholder small{font-size:calc(11 * var(--screen-unit))}
+.work-detail-view{padding:calc(var(--stage-top) + 130 * var(--screen-unit)) 0 calc(40 * var(--screen-unit))}
+.work-detail-layout{width:calc(1018 * var(--screen-unit));margin:auto;grid-template-columns:450fr 496fr;gap:calc(72 * var(--screen-unit))}
+.work-gallery{width:100%;margin:0}
+.work-detail-image{font-size:calc(14 * var(--screen-unit))}
+.work-thumbnails{gap:calc(7 * var(--screen-unit));margin-top:calc(15 * var(--screen-unit))}
+.work-thumbnails button{width:calc(32.8 * var(--screen-unit));height:calc(32.8 * var(--screen-unit));font-size:calc(11 * var(--screen-unit))}
+.works-back{font-size:calc(12 * var(--screen-unit));margin-top:calc(16 * var(--screen-unit))}
+.work-detail-copy{font-size:calc(14 * var(--screen-unit));line-height:1.15}
+.work-description{margin-top:calc(48 * var(--screen-unit))}
+
+
+.archives-view{padding:calc(var(--stage-top) + 146 * var(--screen-unit)) 0 calc(65 * var(--screen-unit))}
+.archive-gallery{position:relative;width:calc(936 * var(--screen-unit));margin:auto}
+.archive-image{width:100%;aspect-ratio:936/526;border:1px solid #222;background:#e4e4e1;display:flex;align-items:center;justify-content:center;font-size:calc(16 * var(--screen-unit));color:#666}
+.archive-image img{display:block;width:100%;height:100%;object-fit:contain}
+.archive-arrow{position:absolute;top:calc(239 * var(--screen-unit));width:calc(50 * var(--screen-unit));height:calc(50 * var(--screen-unit));padding:0;border:0;background:none;font-size:calc(36 * var(--screen-unit));line-height:1}
+.archive-prev{left:calc(-94 * var(--screen-unit))}.archive-next{right:calc(-94 * var(--screen-unit))}
+.archive-thumbnails{display:flex;justify-content:center;gap:calc(8 * var(--screen-unit));margin-top:calc(18 * var(--screen-unit))}
+.archive-thumbnails button{width:calc(32.8 * var(--screen-unit));height:calc(32.8 * var(--screen-unit));border:1px solid #222;background:transparent;padding:0;font-size:calc(11 * var(--screen-unit))}
+.archive-thumbnails button[aria-pressed="true"]{border:2px solid #121212;background:var(--green)}
+.archive-thumbnails img{width:100%;height:100%;object-fit:cover}
+main:has(.comment-view:not([hidden])){padding:0}
+.comment-view{position:relative;height:100dvh;min-height:100dvh;background:#fff;--comment-width:calc(618 * var(--screen-unit))}
+.comment-switch{position:absolute;top:calc(var(--stage-top) + 43 * var(--screen-unit));left:50%;transform:translateX(-50%);display:flex;background:#e7e7e7;border-radius:999px;width:calc(182 * var(--screen-unit));height:calc(29 * var(--screen-unit));overflow:hidden}
+.comment-switch button{width:50%;border:0;border-radius:999px;background:transparent;font-size:calc(12 * var(--screen-unit));color:#555;padding:0}
+.comment-switch button[aria-selected="true"]{background:#00f000;color:#121212}
+.comment-compose{position:absolute;left:50%;top:43%;transform:translate(-50%,-50%);width:var(--comment-width);text-align:center}
+.comment-compose h3{font-size:calc(26 * var(--screen-unit));margin:0;font-weight:700;letter-spacing:-.035em}
+.comment-form{position:absolute;left:50%;top:52.5%;transform:translateX(-50%);width:calc(var(--comment-width) * .8);min-height:calc(49 * var(--screen-unit));border:1px solid #00ed00;border-radius:calc(26 * var(--screen-unit));background:#e9e9e7;display:flex;align-items:flex-end;gap:calc(10 * var(--screen-unit));padding:calc(8 * var(--screen-unit)) calc(10 * var(--screen-unit)) calc(8 * var(--screen-unit)) calc(20 * var(--screen-unit))}
+.comment-form textarea{flex:1;min-width:0;resize:none;border:0;outline:0;background:transparent;font:inherit;font-size:calc(17 * var(--screen-unit));line-height:1.45;max-height:calc(120 * var(--screen-unit));padding:calc(3 * var(--screen-unit)) 0;color:#121212}
+.comment-form:focus-within{box-shadow:0 0 0 2px rgb(0 237 0 / .15)}
+.comment-form button{appearance:none;display:flex;align-items:center;justify-content:center;line-height:0;border:0;border-radius:50%;width:calc(30 * var(--screen-unit));height:calc(30 * var(--screen-unit));background:var(--green);flex-shrink:0;padding:calc(5 * var(--screen-unit))}
+.comment-form button:disabled{opacity:1;cursor:default}.comment-form svg{display:block;width:100%;height:100%;flex-shrink:0}
+.comment-records{position:absolute;top:calc(var(--stage-top) + 170 * var(--screen-unit));bottom:calc(132 * var(--screen-unit));left:50%;transform:translateX(-50%);width:var(--comment-width);overflow-y:auto;overscroll-behavior:contain;padding:calc(10 * var(--screen-unit)) 0}
+.comment-messages{display:flex;flex-direction:column;gap:calc(30 * var(--screen-unit))}
+.comment-bubble{align-self:flex-end;width:78%;background:#00ed00;border-radius:calc(25 * var(--screen-unit));padding:calc(26 * var(--screen-unit)) calc(24 * var(--screen-unit));font-size:calc(20 * var(--screen-unit));line-height:1.4;white-space:pre-wrap;overflow-wrap:anywhere;margin:0}
+.comment-bubble:nth-child(3n){align-self:flex-start}
+.comment-empty{font-size:calc(18 * var(--screen-unit));text-align:center;color:#777;margin-top:calc(100 * var(--screen-unit))}
+.comment-view:has(#comment-records:not([hidden])) .comment-form{top:auto;bottom:calc(40 * var(--screen-unit))}
+.comment-status{position:absolute;left:50%;transform:translateX(-50%);width:var(--comment-width);top:calc(52.5% + 150 * var(--screen-unit));font-size:calc(12 * var(--screen-unit));color:#666;text-align:center;margin:0}
+.comment-view:has(#comment-records:not([hidden])) .comment-status{top:auto;bottom:calc(15 * var(--screen-unit))}
+.comment-view [hidden]{display:none}
+.archive-arrow:focus-visible,.archive-thumbnails button:focus-visible,.comment-switch button:focus-visible,.comment-form button:focus-visible{outline:3px solid #255fff;outline-offset:3px}
+
+
+
+/* The opener is hidden while the green menu is open. */
+.menu-toggle[aria-expanded="true"]{visibility:hidden;pointer-events:none}
+
+/* Supplied exhibition artwork, positioned against the reference layout. */
+:root{--green:#00ff18}
+.home{isolation:isolate;overflow:hidden;min-height:calc(100dvh - 6vw)}
+.home,.home *{-webkit-user-select:none;user-select:none}
+.home img{-webkit-user-drag:none}
+.home::before{content:"";position:absolute;inset:-3vw -4.8vw;z-index:-2;background:#fff}
+.home>.eyebrow{position:relative;z-index:1;margin-bottom:0}
+.home .home-title{position:absolute;left:0;top:10.3%;width:42%;margin:0;line-height:0;z-index:1}
+.home-title img{display:block;width:100%;height:auto}
+.home-token{position:absolute;right:-8%;top:-12%;width:88%;height:135%;object-fit:contain;z-index:-1;pointer-events:none}
+.home .dates{position:relative;z-index:1;padding-top:0;margin-top:auto;gap:1.3vw}
+.home .date-line{width:6.2vw;background:#666}
+.about-poster{aspect-ratio:1190.55 / 1683.78;object-fit:contain;background:#fff}
+@media(max-width:600px) and (orientation:portrait){
+ .home{min-height:calc(100dvh - 6vw)}
+ .home>.eyebrow{font-size:11px;padding-top:12px}
+ .home .home-title{top:13%;width:67%}
+ .home-token{width:100%;height:82%;top:24%;right:-32%;opacity:.8}
+ .home .dates{font-size:10px;padding-bottom:16px;gap:10px}
+ .menu-toggle{top:9px;right:max(8px,calc(4vw - 26.14px));width:40px;height:40px;gap:5px}
+ .about-home{top:6.81px;width:40px;height:40px}
+ .menu-toggle span{width:22px;height:2px}
+}
+
+
+/* Icons extracted from the supplied button artwork. */
+.about-home img,.menu-toggle img{display:block;width:100%;height:100%;object-fit:contain}
+.menu-toggle{padding:0}
+.about-home img{transform:scale(.98);transform-origin:50% 78.74%}
+/* Camera and attachments are anchored to the guestbook input. */
+#comment-camera-toggle{position:absolute;right:calc(100% + 12 * var(--screen-unit));bottom:calc(8 * var(--screen-unit))}
+.comment-camera,.comment-photo-preview{position:absolute;bottom:calc(100% + 12px);left:0;z-index:2}
+.comment-camera{width:min(100%,calc(34dvh * var(--camera-ratio,1.333333)));border:0;border-radius:14px;overflow:hidden;background:transparent}
+.comment-camera video{display:block;width:100%;height:auto;aspect-ratio:var(--camera-ratio,1.333333);object-fit:contain;transform:scaleX(-1)}
+#comment-camera-capture{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);width:clamp(48px,56 * var(--screen-unit),76px);height:clamp(48px,56 * var(--screen-unit),76px);border:0;border-radius:50%;padding:8px;background:transparent;box-shadow:none}
+#comment-camera-capture span{display:block;width:100%;height:100%;border-radius:50%;background:#fff;transition:background .12s ease}
+#comment-camera-capture:active span{background:#aaa}
+#comment-camera-capture:disabled{opacity:.45}
+#comment-camera-close{position:absolute;right:10px;top:10px;width:28px;height:28px;padding:5px;border:0;border-radius:50%;background:rgb(0 0 0 / .35);color:#fff}
+.comment-photo-preview{width:150px;max-width:45%;padding:0;border:0;border-radius:0;background:transparent}
+.comment-photo-preview img{display:block;width:100%;height:auto;max-height:120px;object-fit:contain;border:0;border-radius:12px}
+.comment-photo-preview button{position:absolute;top:6px;right:6px;width:24px;height:24px;padding:4px}
+.comment-bubble p{margin:0;white-space:pre-wrap}
+.comment-bubble img{display:block;width:100%;height:auto;border:0;border-radius:calc(16 * var(--screen-unit))}
+.comment-bubble p+img{margin-top:calc(14 * var(--screen-unit))}
+.comment-bubble--photo{padding:0;background:transparent;border:0;border-radius:0}
+.comment-bubble--photo p{padding:calc(26 * var(--screen-unit)) calc(24 * var(--screen-unit));background:#00ed00;border-radius:calc(25 * var(--screen-unit))}
+.comment-view:has(.comment-camera:not([hidden])) .comment-compose,.comment-view:has(.comment-photo-preview:not([hidden])) .comment-compose{visibility:hidden}
+
+</style>
+</head>
+<body>
+<button class="menu-toggle" id="menu-toggle" type="button" aria-label="메뉴 열기" aria-controls="exhibition-menu" aria-expanded="false"><img src="menu-icon.svg" alt="" aria-hidden="true"></button>
+<button class="menu-backdrop" id="menu-backdrop" type="button" aria-label="메뉴 닫기" tabindex="-1" aria-hidden="true"></button>
+<main>
+<section id="home" class="view home" aria-label="전시 첫 화면">
+<p class="eyebrow"><button class="home-link" id="home-button" aria-label="전시 첫 화면으로">2026 EXHIBITION</button></p><h1 class="home-title"><img src="title.png" alt="토큰이 없어 내일 제목을 생성하기로 했다."></h1>
+<img class="home-token" src="token.svg" alt="" aria-hidden="true" fetchpriority="high">
+<div class="dates"><span>2026.11.02 MON</span><span class="date-line"></span><span>2026.11.16 MON</span></div>
+</section>
+<section id="about" class="view about-view" role="tabpanel" aria-labelledby="tab-about" hidden>
+<button class="about-home" id="about-home" type="button" aria-label="전시 첫 화면으로"><img src="home-icon.svg" alt="" aria-hidden="true"></button>
+<div class="about-layout">
+<img class="about-poster" src="poster.svg?v=2" alt="토큰이 없어 내일 제목을 생성하기로 했다 — 전시 포스터" loading="lazy">
+<div class="about-copy">
+<div class="about-details"><h2>[토큰이 없어 내일 제목을 생성하기로 했다]</h2><p>2026.11.02 - 2026.11.16</p><p>서울특별시 성북구 정릉로 77 국민대학교 예술관 2층 국민 아트스페이스<br><span lang="en">77 Jeongneung-ro, Seongbuk-gu, Seoul<br>Kookmin University College Of Arts 2F, Kookmin Artspace</span></p></div>
+<div class="about-description">
+<p>오늘 우리는 생각하고 만드는 일마저 기술과 나누어 갖는 시대에 서 있다. AI는 답을 생성하고, 이름을 붙이고, 생각의 방향까지 제안한다. 그렇다면 이러한 시대에 인간의 사유는 어떻게 계속될 수 있을까?</p>
+<p>‘토큰이 없어 내일 제목을 생성하기로 했다’는 제목은 AI로 전시명을 지으려던 시도를 암시하는 한편, 역설적으로 사람이 직접 지은 제목임을 드러낸다. 사유의 영역, 창작의 영역까지도 AI에게 위임하는 오늘, 이 제목은 인간의 사유가 어떻게 계속되는지를 되묻게 한다.</p>
+<p>토큰은 하나의 생각을 이어가기 위한 조건이자 가능성이다. 이는 AI의 기술적 단위로서가 아니라 새로운 생각을 이끄는 조건으로, 우리를 완성된 결과가 아닌 계속되는 과정 위에 서 있게 한다. 졸업이라는 하나의 지점에 다다랐지만, 이들이 제시하는 작업은 마침표가 아닌 또 다른 질문의 시작이다. 완성되지 않았기에 다시 시작할 수 있고, 아직 도착하지 않았기에 더 먼 가능성을 향해 나아갈 수 있다.</p>
+<p>곧 동이 틀 새벽과 같은 이곳에서 각자의 사유가 피워낸 고유한 가능성들을 즐겁게 마주하길 바란다.</p>
+</div>
+<div class="about-artists"><h3>참여작가</h3><p class="artists-pending">참여작가 명단 준비 중</p></div>
+</div></div></section>
+<section id="works" class="view studio-view works-view" role="tabpanel" aria-labelledby="tab-works" hidden><a class="about-home" href="#home" aria-label="전시 첫 화면으로"><img src="home-icon.svg" alt="" aria-hidden="true"></a><h2 class="sr-only">WORKS</h2><div class="works-grid"><a class="work-card work-card-1" href="#works/1" aria-label="작품 01 상세 보기"><span class="work-image-placeholder">WORK 01<small>이미지 준비 중</small></span></a><a class="work-card work-card-2" href="#works/2" aria-label="작품 02 상세 보기"><span class="work-image-placeholder">WORK 02<small>이미지 준비 중</small></span></a><a class="work-card work-card-3" href="#works/3" aria-label="작품 03 상세 보기"><span class="work-image-placeholder">WORK 03<small>이미지 준비 중</small></span></a><a class="work-card work-card-4" href="#works/4" aria-label="작품 04 상세 보기"><span class="work-image-placeholder">WORK 04<small>이미지 준비 중</small></span></a><a class="work-card work-card-5" href="#works/5" aria-label="작품 05 상세 보기"><span class="work-image-placeholder">WORK 05<small>이미지 준비 중</small></span></a><a class="work-card work-card-6" href="#works/6" aria-label="작품 06 상세 보기"><span class="work-image-placeholder">WORK 06<small>이미지 준비 중</small></span></a></div></section><section id="work-detail" class="view studio-view work-detail-view" aria-labelledby="work-title" hidden><a class="about-home" href="#home" aria-label="전시 첫 화면으로"><img src="home-icon.svg" alt="" aria-hidden="true"></a><div class="work-detail-layout"><div class="work-gallery"><div id="work-image" class="work-detail-image" role="img" aria-label="작품 이미지 준비 중"></div><div id="work-thumbnails" class="work-thumbnails" aria-label="작품 이미지 선택"></div><a class="works-back" href="#works">← WORKS</a></div><div class="work-detail-copy"><h2 id="work-title"></h2><p id="work-artist"></p><p id="work-specs"></p><div id="work-description" class="work-description"></div></div></div></section>
+<section id="archives" class="view studio-view archives-view" role="tabpanel" aria-labelledby="tab-archives" hidden><a class="about-home" href="#home" aria-label="전시 첫 화면으로"><img src="home-icon.svg" alt="" aria-hidden="true"></a><h2 class="sr-only">ARCHIVES</h2><div class="archive-gallery" aria-roledescription="캐러셀" aria-label="전시 아카이브"><button id="archive-prev" class="archive-arrow archive-prev" aria-label="이전 이미지">〈</button><div id="archive-image" class="archive-image" role="img" aria-label="아카이브 이미지 준비 중"></div><button id="archive-next" class="archive-arrow archive-next" aria-label="다음 이미지">〉</button><div id="archive-thumbnails" class="archive-thumbnails" aria-label="아카이브 이미지 선택"></div><p id="archive-status" class="sr-only" aria-live="polite"></p></div></section>
+<section id="comment" class="view comment-view" role="tabpanel" aria-labelledby="tab-comment" hidden><a class="about-home" href="#home" aria-label="전시 첫 화면으로"><img src="home-icon.svg" alt="" aria-hidden="true"></a><h2 class="sr-only">COMMENT</h2><div class="comment-switch" role="tablist" aria-label="방명록 화면"><button id="comment-compose-tab" role="tab" aria-selected="true" aria-controls="comment-compose">남기기</button><button id="comment-records-tab" role="tab" aria-selected="false" aria-controls="comment-records" tabindex="-1">기록보기</button></div><div id="comment-compose" class="comment-compose" role="tabpanel" aria-labelledby="comment-compose-tab"><h3>익명님, 방명록을 생성해볼까요?</h3></div><div id="comment-records" class="comment-records" role="tabpanel" aria-labelledby="comment-records-tab" hidden><div id="comment-messages" class="comment-messages" aria-label="방명록 기록"></div></div><form id="comment-form" class="comment-form"><button id="comment-camera-toggle" type="button" aria-label="카메라 열기" aria-controls="comment-camera" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 6.5h4l1.5-2h5l1.5 2h4v13H4Z"/><circle cx="12" cy="12.5" r="3.5"/></svg></button>
+<div id="comment-camera" class="comment-camera" role="region" aria-label="사진 촬영" hidden>
+ <video id="comment-camera-video" autoplay muted playsinline aria-label="카메라 미리보기"></video>
+ <button id="comment-camera-capture" type="button" aria-label="사진 찍기" disabled><span aria-hidden="true"></span></button><button id="comment-camera-close" type="button" aria-label="카메라 미리보기 닫기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+</div>
+<div id="comment-photo-preview" class="comment-photo-preview" hidden><img id="comment-photo-image" alt="첨부할 사진"><button id="comment-photo-remove" type="button" aria-label="첨부 사진 삭제"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div>
+<label class="sr-only" for="comment-input">방명록 남기기</label><textarea id="comment-input" rows="1" maxlength="2000" placeholder="전시에 대한 생각과 사진을 남겨주세요."></textarea><button id="comment-submit" type="submit" aria-label="방명록 전송" disabled><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 19V5m-6 6 6-6 6 6"/></svg></button></form><p id="comment-status" class="comment-status" role="status"></p></section>
+<section id="contact" class="view studio-view contact-view" role="tabpanel" aria-labelledby="tab-contact" hidden><a class="about-home" href="#home" aria-label="전시 첫 화면으로"><img src="home-icon.svg" alt="" aria-hidden="true"></a><h2 class="sr-only">CONTACT</h2><div class="contact-sheet" aria-hidden="true"></div></section>
+</main>
+<aside id="exhibition-menu" class="sidebar" role="dialog" aria-modal="true" aria-label="전시 메뉴" inert><nav class="nav-buttons" role="tablist" aria-label="전시 정보" aria-orientation="vertical"><button id="tab-about" role="tab" aria-controls="about" aria-selected="false" data-view="about"><span class="menu-label">ABOUT</span></button><button id="tab-contact" role="tab" aria-controls="contact" aria-selected="false" data-view="contact"><span class="menu-label">CONTACT</span></button><button id="tab-works" role="tab" aria-controls="works" aria-selected="false" data-view="works"><span class="menu-label">WORKS</span></button><button id="tab-archives" role="tab" aria-controls="archives" aria-selected="false" data-view="archives"><span class="menu-label">ARCHIVES</span></button><button id="tab-comment" role="tab" aria-controls="comment" aria-selected="false" data-view="comment"><span class="menu-label">COMMENT</span></button></nav></aside>
+<script>
+const menuToggle=document.querySelector('#menu-toggle');
+const menu=document.querySelector('#exhibition-menu');
+const main=document.querySelector('main');
+function setMenu(open,moveFocus=true){
+ document.body.classList.toggle('menu-open',open);
+ menuToggle.setAttribute('aria-expanded',String(open));
+ menuToggle.setAttribute('aria-label',open?'메뉴 닫기':'메뉴 열기');
+ menu.inert=!open;
+ main.inert=open;
+ if(moveFocus&&open){menu.querySelector('[role="tab"][tabindex="0"]').focus()}
+ else if(moveFocus){menuToggle.focus()}
+}
+// Hover or click opens the menu; leaving the green menu restores the page.
+menuToggle.addEventListener('pointerenter',event=>{
+ if(event.pointerType!=='touch')setMenu(true,false);
+});
+menuToggle.addEventListener('click',()=>setMenu(true));
+menu.addEventListener('pointerleave',event=>{
+ if(event.pointerType!=='touch')setMenu(false,false);
+});
+document.querySelector('#menu-backdrop').addEventListener('click',()=>setMenu(false));
+document.addEventListener('keydown',event=>{
+ if(!document.body.classList.contains('menu-open'))return;
+ if(event.key==='Escape'){event.preventDefault();setMenu(false)}
+ if(event.key==='Tab'){
+  const stops=[...menu.querySelectorAll('[role="tab"][tabindex="0"]')];
+  const index=stops.indexOf(document.activeElement);
+  event.preventDefault();stops[(index+(event.shiftKey?-1:1)+stops.length)%stops.length].focus();
+ }
+});
+const tabs=[...document.querySelectorAll('[data-view]')];
+// Replace these placeholders with the final artist details and PNG paths.
+// images: [{src:'images/work-01-1.png', alt:'작품 정면'}, ...]
+const artworks=Array.from({length:6},(_,i)=>({id:String(i+1),title:`작품 ${String(i+1).padStart(2,'0')}`,artist:'작가명 준비 중',specs:'재료 · 크기 · 제작연도 준비 중',description:['작품 설명 준비 중입니다. 이미지와 최종 원고를 받으면 이곳에 반영됩니다.'],images:[null,null,null]}));
+let activeArtwork=null;
+function showWorkImage(index){
+ const image=activeArtwork.images[index];
+ const frame=document.querySelector('#work-image');
+ frame.replaceChildren();
+ if(image){const img=document.createElement('img');img.src=image.src;img.alt=image.alt||activeArtwork.title;frame.append(img);frame.setAttribute('aria-label',img.alt)}
+ else{frame.textContent=`${activeArtwork.title} · 이미지 ${index+1} 준비 중`;frame.setAttribute('aria-label',frame.textContent)}
+ document.querySelectorAll('#work-thumbnails button').forEach((button,i)=>button.setAttribute('aria-pressed',String(i===index)));
+}
+function renderArtwork(artwork){
+ activeArtwork=artwork;
+ document.querySelector('#work-title').textContent=`[${artwork.title}]`;
+ document.querySelector('#work-artist').textContent=artwork.artist;
+ document.querySelector('#work-specs').textContent=artwork.specs;
+ const description=document.querySelector('#work-description');description.replaceChildren();
+ artwork.description.forEach(text=>{const p=document.createElement('p');p.textContent=text;description.append(p)});
+ const thumbnails=document.querySelector('#work-thumbnails');thumbnails.replaceChildren();
+ artwork.images.forEach((image,index)=>{const button=document.createElement('button');button.type='button';button.setAttribute('aria-label',`작품 이미지 ${index+1} 보기`);button.addEventListener('click',()=>showWorkImage(index));if(image){const img=document.createElement('img');img.src=image.src;img.alt='';button.append(img)}else{button.textContent=index+1}thumbnails.append(button)});
+ showWorkImage(0);
+}
+const validViews=['home',...tabs.map(tab=>tab.dataset.view)];
+function render(route){
+ const artwork=artworks.find(work=>route===`works/${work.id}`);
+ let view=artwork?'work-detail':validViews.includes(route)?route:'home';
+ if(artwork)renderArtwork(artwork);
+ if(view==='comment')setCommentMode('compose');
+ document.querySelectorAll('.view').forEach(panel=>panel.hidden=panel.id!==view);
+ tabs.forEach((tab,i)=>{const selected=tab.dataset.view===(artwork?'works':view);tab.setAttribute('aria-selected',String(selected));tab.tabIndex=selected||(view==='home'&&i===0)?0:-1});
+ document.title=(view==='home'?'전시 안내':document.querySelector('#'+view+' h2').textContent)+' — 토큰이 없어';
+ window.scrollTo({top:0,behavior:'instant'});
+}
+
+tabs.forEach((tab,i)=>{tab.addEventListener('click',()=>{location.hash=tab.dataset.view;setMenu(false)});tab.addEventListener('keydown',event=>{let next;if(event.key==='ArrowDown'||event.key==='ArrowRight')next=(i+1)%tabs.length;if(event.key==='ArrowUp'||event.key==='ArrowLeft')next=(i+tabs.length-1)%tabs.length;if(event.key==='Home')next=0;if(event.key==='End')next=tabs.length-1;if(next!==undefined){event.preventDefault();tabs[next].focus();location.hash=tabs[next].dataset.view}})});
+
+// Add the final archive PNG paths here: {src:'images/archive-01.png', alt:'전시 전경'}.
+const archiveImages=Array.from({length:8},()=>null);
+let archiveIndex=0;
+function showArchive(index){
+ archiveIndex=(index+archiveImages.length)%archiveImages.length;
+ const image=archiveImages[archiveIndex],frame=document.querySelector('#archive-image');frame.replaceChildren();
+ if(image){const img=document.createElement('img');img.src=image.src;img.alt=image.alt||`아카이브 ${archiveIndex+1}`;frame.append(img);frame.setAttribute('aria-label',img.alt)}
+ else{frame.textContent=`ARCHIVE ${String(archiveIndex+1).padStart(2,'0')} · 이미지 준비 중`;frame.setAttribute('aria-label',frame.textContent)}
+ document.querySelectorAll('#archive-thumbnails button').forEach((button,i)=>button.setAttribute('aria-pressed',String(i===archiveIndex)));
+ document.querySelector('#archive-status').textContent=`${archiveImages.length}개 중 ${archiveIndex+1}번째 이미지`;
+}
+archiveImages.forEach((image,index)=>{const button=document.createElement('button');button.type='button';button.setAttribute('aria-label',`아카이브 ${index+1} 보기`);if(image){const img=document.createElement('img');img.src=image.src;img.alt='';button.append(img)}else{button.textContent=index+1}button.addEventListener('click',()=>showArchive(index));document.querySelector('#archive-thumbnails').append(button)});
+document.querySelector('#archive-prev').addEventListener('click',()=>showArchive(archiveIndex-1));
+document.querySelector('#archive-next').addEventListener('click',()=>showArchive(archiveIndex+1));
+document.querySelector('.archive-gallery').addEventListener('keydown',event=>{if(event.key==='ArrowLeft'||event.key==='ArrowRight'){event.preventDefault();showArchive(archiveIndex+(event.key==='ArrowRight'?1:-1))}});
+showArchive(0);
+const commentStorageKey='exhibition-2026-comments';
+const validPhoto=value=>typeof value==='string'&&value.length<1500000&&/^data:image\/jpeg;base64,[A-Za-z0-9+/=]+$/.test(value);
+const normalizeComments=items=>Array.isArray(items)?items.filter(item=>item&&(typeof item.text==='string'&&item.text.trim()||validPhoto(item.photo))).map(item=>({text:typeof item.text==='string'?item.text.slice(0,2000):'',photo:validPhoto(item.photo)?item.photo:null,createdAt:item.createdAt})):[];
+let comments=[],commentDatabase=null,commentsReady=false,pendingPhoto=null,commentSending=false;
+const commentInput=document.querySelector('#comment-input'),commentSubmit=document.querySelector('#comment-submit');
+const cameraButton=document.querySelector('#comment-camera-toggle'),cameraPanel=document.querySelector('#comment-camera'),cameraVideo=document.querySelector('#comment-camera-video');
+const captureButton=document.querySelector('#comment-camera-capture'),photoPreview=document.querySelector('#comment-photo-preview');
+let cameraStream=null,cameraRequest=0;
+function updateCommentSubmit(){commentSubmit.disabled=!commentsReady||commentSending||(!commentInput.value.trim()&&!pendingPhoto)}
+function setCommentStatus(message){document.querySelector('#comment-status').textContent=message}
+function renderComments(){
+ const messages=document.querySelector('#comment-messages');messages.replaceChildren();
+ if(!comments.length){const empty=document.createElement('p');empty.className='comment-empty';empty.textContent=commentsReady?'아직 남겨진 기록이 없습니다. 첫 방명록을 남겨주세요.':'기록을 불러오는 중입니다.';messages.append(empty)}
+ comments.forEach(comment=>{
+  const bubble=document.createElement('div');bubble.className='comment-bubble';
+  if(comment.text){const text=document.createElement('p');text.textContent=comment.text;bubble.append(text)}
+  if(comment.photo){bubble.classList.add('comment-bubble--photo');const photo=document.createElement('img');photo.src=comment.photo;photo.alt='방명록에 남긴 사진';bubble.append(photo)}
+  messages.append(bubble);
+ });
+}
+function closeCommentCamera(moveFocus=false){
+ cameraRequest++;if(cameraStream)cameraStream.getTracks().forEach(track=>track.stop());cameraStream=null;
+ cameraVideo.srcObject=null;cameraPanel.hidden=true;captureButton.disabled=true;
+ cameraButton.setAttribute('aria-expanded','false');cameraButton.setAttribute('aria-label','카메라 열기');
+ photoPreview.hidden=!pendingPhoto;if(moveFocus)cameraButton.focus();
+}
+function setCommentMode(mode){
+ closeCommentCamera();const writing=mode==='compose';
+ document.querySelector('#comment-compose').hidden=!writing;
+ document.querySelector('#comment-records').hidden=writing;
+ ['compose','records'].forEach(name=>{const tab=document.querySelector('#comment-'+name+'-tab');tab.setAttribute('aria-selected',String(name===mode));tab.tabIndex=name===mode?0:-1});
+ if(!writing){renderComments();const records=document.querySelector('#comment-records');requestAnimationFrame(()=>records.scrollTop=records.scrollHeight)}
+}
+function loadCommentDatabase(){
+ return new Promise((resolve,reject)=>{
+  const request=indexedDB.open('exhibition-2026-guestbook',1);
+  request.onupgradeneeded=()=>{const db=request.result;db.createObjectStore('comments',{keyPath:'id',autoIncrement:true});db.createObjectStore('meta')};
+  request.onerror=()=>reject(request.error);request.onblocked=()=>reject(new Error('Database blocked'));
+  request.onsuccess=()=>{const db=request.result;db.onversionchange=()=>{db.close();commentDatabase=null};resolve(db)};
+ });
+}
+function readCommentDatabase(db,legacy){
+ return new Promise((resolve,reject)=>{
+  const tx=db.transaction(['comments','meta'],'readwrite'),store=tx.objectStore('comments'),meta=tx.objectStore('meta');let items=[];
+  const imported=meta.get('legacy-imported');
+  imported.onsuccess=()=>{if(!imported.result){legacy.forEach(item=>store.add(item));meta.put(true,'legacy-imported')}const request=store.getAll();request.onsuccess=()=>items=request.result};
+  tx.oncomplete=()=>resolve(normalizeComments(items));tx.onerror=()=>reject(tx.error);tx.onabort=()=>reject(tx.error);
+ });
+}
+async function initializeComments(){
+ let legacy=[];try{legacy=normalizeComments(JSON.parse(localStorage.getItem(commentStorageKey)||'[]'))}catch(error){}
+ try{const db=await loadCommentDatabase();comments=await readCommentDatabase(db,legacy);commentDatabase=db}catch(error){comments=legacy}
+ commentsReady=true;updateCommentSubmit();renderComments();
+}
+function saveComment(entry){
+ if(!commentDatabase){localStorage.setItem(commentStorageKey,JSON.stringify([...comments,entry]));return Promise.resolve()}
+ return new Promise((resolve,reject)=>{const tx=commentDatabase.transaction('comments','readwrite');tx.objectStore('comments').add(entry);tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error);tx.onabort=()=>reject(tx.error)});
+}
+['compose','records'].forEach(mode=>{
+ const tab=document.querySelector('#comment-'+mode+'-tab');tab.addEventListener('click',()=>setCommentMode(mode));
+ tab.addEventListener('keydown',event=>{if(['ArrowLeft','ArrowRight','Home','End'].includes(event.key)){event.preventDefault();const next=event.key==='Home'?'compose':event.key==='End'?'records':mode==='compose'?'records':'compose';setCommentMode(next);document.querySelector('#comment-'+next+'-tab').focus()}});
+});
+cameraButton.addEventListener('click',async()=>{
+ if(!cameraPanel.hidden){closeCommentCamera(true);return}
+ setCommentStatus('');
+ if(!navigator.mediaDevices?.getUserMedia){setCommentStatus('카메라를 사용할 수 없습니다. HTTPS 주소에서 열어주세요.');return}
+ cameraPanel.hidden=false;photoPreview.hidden=true;captureButton.disabled=true;
+ cameraButton.setAttribute('aria-expanded','true');cameraButton.setAttribute('aria-label','카메라 닫기');
+ const request=++cameraRequest;
+ try{
+  const stream=await navigator.mediaDevices.getUserMedia({video:{facingMode:'user',width:{ideal:1280},height:{ideal:960}},audio:false});
+  if(request!==cameraRequest||document.querySelector('#comment').hidden||document.hidden){stream.getTracks().forEach(track=>track.stop());return}
+  cameraStream=stream;cameraVideo.srcObject=stream;await cameraVideo.play();
+  if(request===cameraRequest)syncCommentCameraSize();
+ }catch(error){
+  if(request!==cameraRequest)return;
+  closeCommentCamera();
+  setCommentStatus(error.name==='NotAllowedError'?'사진을 찍으려면 Safari의 카메라 사용을 허용해주세요.':error.name==='NotFoundError'?'연결된 카메라를 찾을 수 없습니다.':'카메라를 열지 못했습니다. 다른 앱에서 카메라를 사용 중인지 확인해주세요.');
+ }
+});
+function syncCommentCameraSize(){
+ if(cameraVideo.videoWidth&&cameraVideo.videoHeight)cameraPanel.style.setProperty('--camera-ratio',String(cameraVideo.videoWidth/cameraVideo.videoHeight));
+ captureButton.disabled=!cameraStream||!cameraVideo.videoWidth||!cameraVideo.videoHeight;
+}
+cameraVideo.addEventListener('loadedmetadata',syncCommentCameraSize);
+cameraVideo.addEventListener('loadeddata',syncCommentCameraSize);
+cameraVideo.addEventListener('resize',syncCommentCameraSize);
+document.querySelector('#comment-camera-close').addEventListener('click',()=>closeCommentCamera(true));
+cameraPanel.addEventListener('keydown',event=>{if(event.key==='Escape'){event.preventDefault();closeCommentCamera(true)}});
+captureButton.addEventListener('click',()=>{
+ if(!cameraStream||!cameraVideo.videoWidth||!cameraVideo.videoHeight)return;
+ try{
+  const canvas=document.createElement('canvas'),scale=Math.min(1,960/cameraVideo.videoWidth,960/cameraVideo.videoHeight);
+  canvas.width=Math.round(cameraVideo.videoWidth*scale);canvas.height=Math.round(cameraVideo.videoHeight*scale);
+  const ctx=canvas.getContext('2d');if(!ctx)throw new Error('Canvas unavailable');
+  ctx.translate(canvas.width,0);ctx.scale(-1,1);ctx.drawImage(cameraVideo,0,0,canvas.width,canvas.height);
+  const photo=canvas.toDataURL('image/jpeg',.72);if(!validPhoto(photo))throw new Error('Photo too large');
+  pendingPhoto=photo;document.querySelector('#comment-photo-image').src=photo;closeCommentCamera();updateCommentSubmit();commentInput.focus();
+ }catch(error){setCommentStatus('사진을 첨부하지 못했습니다. 다시 촬영해주세요.')}
+});
+document.querySelector('#comment-photo-remove').addEventListener('click',()=>{pendingPhoto=null;document.querySelector('#comment-photo-image').removeAttribute('src');photoPreview.hidden=true;updateCommentSubmit();cameraButton.focus()});
+commentInput.addEventListener('input',()=>{updateCommentSubmit();commentInput.style.height='auto';commentInput.style.height=commentInput.scrollHeight+'px'});
+commentInput.addEventListener('keydown',event=>{if(event.key==='Enter'&&!event.shiftKey&&!event.isComposing){event.preventDefault();if(!commentSubmit.disabled)document.querySelector('#comment-form').requestSubmit()}});
+document.querySelector('#comment-form').addEventListener('submit',async event=>{
+ event.preventDefault();const text=commentInput.value.trim().slice(0,2000);if(!commentsReady||commentSending||(!text&&!pendingPhoto))return;
+ const entry={text,photo:pendingPhoto,createdAt:new Date().toISOString()};commentSending=true;updateCommentSubmit();setCommentStatus('');
+ commentInput.disabled=true;cameraButton.disabled=true;document.querySelector('#comment-photo-remove').disabled=true;closeCommentCamera();
+ try{
+  await saveComment(entry);comments.push(entry);pendingPhoto=null;commentInput.value='';commentInput.style.height='auto';
+  document.querySelector('#comment-photo-image').removeAttribute('src');photoPreview.hidden=true;setCommentMode('records');
+ }catch(error){setCommentStatus('기록을 저장하지 못했습니다. 저장 공간과 브라우저 설정을 확인한 뒤 다시 전송해주세요.')}
+ finally{commentSending=false;commentInput.disabled=false;cameraButton.disabled=false;document.querySelector('#comment-photo-remove').disabled=false;updateCommentSubmit();commentInput.focus()}
+});
+new MutationObserver(()=>{if(document.querySelector('#comment').hidden)closeCommentCamera()}).observe(document.querySelector('#comment'),{attributes:true,attributeFilter:['hidden']});
+document.addEventListener('visibilitychange',()=>{if(document.hidden)closeCommentCamera()});window.addEventListener('pagehide',()=>closeCommentCamera());
+initializeComments();
+
+document.querySelector('#about-home').addEventListener('click',()=>{location.hash='home'});
+document.querySelector('#home-button').addEventListener('click',()=>{location.hash='home'});window.addEventListener('hashchange',()=>render(location.hash.slice(1)));render(location.hash.slice(1));
+// Original token squares: staggered blinking and click-drag spring physics.
+(()=>{
+ const image=document.querySelector('img.home-token'),home=document.querySelector('#home');
+ const reduced=matchMedia('(prefers-reduced-motion: reduce)');
+ const parts=[{"x":1418.713,"y":170.228,"w":50.137,"h":52.183,"green":false},{"x":1418.713,"y":442.4,"w":50.137,"h":49.625,"green":true},{"x":1418.713,"y":492.025,"w":50.137,"h":49.625,"green":false},{"x":1747.672,"y":444.446,"w":48.602,"h":48.602,"green":false},{"x":1699.07,"y":493.048,"w":48.602,"h":48.602,"green":true},{"x":1418.713,"y":593.833,"w":50.137,"h":52.695,"green":false},{"x":1418.713,"y":646.528,"w":50.137,"h":52.695,"green":false},{"x":821.676,"y":814.844,"w":53.718,"h":52.695,"green":true},{"x":767.958,"y":867.539,"w":53.718,"h":52.695,"green":true},{"x":821.676,"y":867.539,"w":53.718,"h":52.695,"green":false},{"x":534.668,"y":911.025,"w":49.625,"h":50.137,"green":false},{"x":584.294,"y":911.025,"w":49.114,"h":50.137,"green":false},{"x":633.407,"y":911.025,"w":49.625,"h":50.137,"green":false},{"x":1373.692,"y":972.417,"w":47.579,"h":48.09,"green":false},{"x":1468.338,"y":972.417,"w":47.579,"h":48.09,"green":false},{"x":1230.956,"y":1020.508,"w":47.579,"h":47.579,"green":false},{"x":1278.535,"y":1020.508,"w":47.579,"h":47.579,"green":false},{"x":1326.114,"y":1020.508,"w":47.579,"h":47.579,"green":false},{"x":1373.692,"y":1020.508,"w":47.579,"h":47.579,"green":false},{"x":1421.271,"y":1020.508,"w":47.067,"h":47.579,"green":false},{"x":1468.338,"y":1020.508,"w":47.579,"h":47.579,"green":false},{"x":1230.956,"y":1068.086,"w":47.579,"h":48.09,"green":false},{"x":1278.535,"y":1068.086,"w":47.579,"h":48.09,"green":false},{"x":1326.114,"y":1068.086,"w":47.579,"h":48.09,"green":false},{"x":1468.338,"y":1068.086,"w":47.579,"h":48.09,"green":false},{"x":1230.956,"y":1116.177,"w":47.579,"h":47.579,"green":false},{"x":1278.535,"y":1116.177,"w":47.579,"h":47.579,"green":false},{"x":1326.114,"y":1116.177,"w":47.579,"h":47.579,"green":false},{"x":1468.338,"y":1116.177,"w":47.579,"h":47.579,"green":false},{"x":1468.338,"y":1163.756,"w":47.579,"h":48.09,"green":false},{"x":1468.338,"y":1211.846,"w":47.579,"h":47.579,"green":false},{"x":1468.338,"y":1259.425,"w":47.579,"h":48.09,"green":false},{"x":1468.338,"y":1307.515,"w":47.579,"h":47.579,"green":false},{"x":1136.31,"y":1355.094,"w":47.579,"h":48.09,"green":false},{"x":1183.889,"y":1355.094,"w":47.067,"h":48.09,"green":false},{"x":1230.956,"y":1355.094,"w":47.579,"h":48.09,"green":false},{"x":1278.535,"y":1355.094,"w":47.579,"h":48.09,"green":false},{"x":1326.114,"y":1355.094,"w":47.579,"h":48.09,"green":false},{"x":1373.692,"y":1355.094,"w":47.579,"h":48.09,"green":false},{"x":1421.271,"y":1355.094,"w":47.067,"h":48.09,"green":false},{"x":1468.338,"y":1355.094,"w":47.579,"h":48.09,"green":false},{"x":722.937,"y":1203.66,"w":49.625,"h":50.137,"green":false},{"x":772.562,"y":1203.66,"w":49.625,"h":50.137,"green":false},{"x":452.812,"y":1340.769,"w":49.625,"h":60.369,"green":true},{"x":502.438,"y":1340.769,"w":49.625,"h":60.369,"green":true},{"x":630.849,"y":1342.816,"w":50.137,"h":52.183,"green":false},{"x":74.228,"y":1438.996,"w":52.183,"h":50.137,"green":false},{"x":311.611,"y":1438.996,"w":49.625,"h":48.602,"green":true},{"x":361.236,"y":1438.996,"w":49.114,"h":48.602,"green":false},{"x":410.35,"y":1438.996,"w":49.625,"h":48.602,"green":false},{"x":361.236,"y":1487.598,"w":49.114,"h":48.602,"green":false},{"x":410.35,"y":1487.598,"w":49.625,"h":48.602,"green":false},{"x":1692.931,"y":1443.089,"w":58.322,"h":52.183,"green":true},{"x":1228.398,"y":1490.156,"w":49.625,"h":52.183,"green":false},{"x":1278.023,"y":1490.156,"w":49.625,"h":52.183,"green":false},{"x":1468.338,"y":1625.219,"w":49.625,"h":49.625,"green":true},{"x":1468.338,"y":1674.844,"w":49.625,"h":50.137,"green":true},{"x":1369.6,"y":1724.981,"w":49.625,"h":50.137,"green":false},{"x":1419.225,"y":1724.981,"w":49.114,"h":50.137,"green":false},{"x":1468.338,"y":1724.981,"w":49.625,"h":50.137,"green":true},{"x":1369.6,"y":1775.118,"w":49.625,"h":49.625,"green":false},{"x":1019.665,"y":1651.822,"w":49.625,"h":48.602,"green":true},{"x":1069.29,"y":1700.424,"w":49.625,"h":48.602,"green":true},{"x":507.554,"y":1698.889,"w":49.114,"h":48.602,"green":false},{"x":556.667,"y":1698.889,"w":48.602,"h":48.602,"green":false},{"x":605.269,"y":1698.889,"w":49.114,"h":48.602,"green":false},{"x":360.724,"y":1747.491,"w":49.114,"h":48.602,"green":false},{"x":409.838,"y":1747.491,"w":48.602,"h":48.602,"green":false},{"x":458.44,"y":1747.491,"w":49.114,"h":48.602,"green":false},{"x":507.554,"y":1747.491,"w":49.114,"h":48.602,"green":false},{"x":556.667,"y":1747.491,"w":48.602,"h":48.602,"green":false},{"x":605.269,"y":1747.491,"w":49.114,"h":48.602,"green":false},{"x":1652.003,"y":1727.539,"w":49.625,"h":50.137,"green":true},{"x":1701.628,"y":1727.539,"w":49.625,"h":50.137,"green":true},{"x":1418.713,"y":1821.673,"w":50.137,"h":52.183,"green":true},{"x":597.595,"y":1846.23,"w":48.602,"h":48.602,"green":true},{"x":548.993,"y":1894.832,"w":48.602,"h":49.114,"green":true},{"x":597.595,"y":1943.946,"w":48.602,"h":48.602,"green":true},{"x":741.355,"y":1942.411,"w":50.137,"h":50.137,"green":false},{"x":1420.248,"y":1966.968,"w":49.114,"h":48.09,"green":false},{"x":1420.248,"y":2015.058,"w":49.114,"h":48.09,"green":false},{"x":1469.362,"y":2015.058,"w":48.602,"h":48.09,"green":false},{"x":1371.646,"y":2063.148,"w":48.602,"h":48.09,"green":false},{"x":1420.248,"y":2063.148,"w":49.114,"h":48.09,"green":false},{"x":1782.972,"y":1966.968,"w":52.183,"h":50.137,"green":false},{"x":1701.116,"y":2059.056,"w":48.09,"h":52.183,"green":false}].map((p,i)=>({...p,dx:0,dy:0,vx:0,vy:0,phase:(i*.61803398875%1)*18000}));
+ const blackParts=parts.filter(p=>!p.green);
+ blackParts.forEach((p,i)=>{p.blink=Math.floor((i+1)*.8)>Math.floor(i*.8)});
+ // Neighbouring squares share exclusive blink slots in clusters of four or more.
+ const unseen=new Set(parts);let clusterIndex=0;
+ const neighbours=(a,b)=>Math.max(a.x-b.x-b.w,b.x-a.x-a.w)<=8&&Math.max(a.y-b.y-b.h,b.y-a.y-a.h)<=8;
+ while(unseen.size){
+  const first=unseen.values().next().value,cluster=[first];unseen.delete(first);
+  for(let i=0;i<cluster.length;i++)for(const candidate of unseen){
+   if(neighbours(cluster[i],candidate)){cluster.push(candidate);unseen.delete(candidate)}
+  }
+  if(cluster.length<4)continue;
+  const blinking=cluster.filter(p=>!p.green&&p.blink);
+  const period=Math.max(18000,blinking.length*4440);
+  const offset=(clusterIndex++*.61803398875%1)*period;
+  blinking.forEach((p,i)=>{p.blinkPeriod=period;p.phase=period+offset-i*4440});
+  const width=Math.max(...cluster.map(p=>p.x+p.w))-Math.min(...cluster.map(p=>p.x));
+  const height=Math.max(...cluster.map(p=>p.y+p.h))-Math.min(...cluster.map(p=>p.y));
+  // The large black bracket uses distant pairs; other clusters keep one blink.
+  if(width>300&&height>350&&cluster.every(p=>!p.green)){
+   const distance=(a,b)=>Math.hypot(a.x+a.w/2-b.x-b.w/2,a.y+a.h/2-b.y-b.h/2);
+   const pending=[...blinking],pairs=[];
+   while(pending.length){
+    const a=pending.shift();
+    const candidates=pending.length?pending:blinking.filter(p=>p!==a);
+    const b=candidates.reduce((best,p)=>!best||distance(a,p)>distance(a,best)?p:best,null);
+    if(b&&distance(a,b)>=3*Math.max(a.w,a.h,b.w,b.h)){
+     pairs.push([a,b]);const index=pending.indexOf(b);if(index>=0)pending.splice(index,1);
+    }else pairs.push([a]);
+   }
+   const pairPeriod=Math.max(18000,pairs.length*4440);
+   blinking.forEach(p=>{p.blinkPeriod=pairPeriod;p.blinkPhases=[]});
+   pairs.forEach((pair,i)=>pair.forEach((p,j)=>{
+    const delay=j===0?0:350+(i%4)*120;
+    p.blinkPhases.push(pairPeriod+offset-i*4440-delay);
+   }));
+   blinking.forEach(p=>{p.phase=p.blinkPhases[0]});
+  }
+
+ }
+
+ const canvas=document.createElement('canvas');canvas.className='home-token';canvas.width=2048;canvas.height=2560;canvas.setAttribute('aria-hidden','true');
+ const ctx=canvas.getContext('2d');if(!ctx)return;
+ const base=new Image(),atlas=new Image();let ready=false,frame=0,last=0,painted=0,down=null;
+ const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+ function point(e){
+  const r=canvas.getBoundingClientRect(),scale=Math.min(r.width/2048,r.height/2560);
+  return{x:(e.clientX-r.left-(r.width-2048*scale)/2)/scale,y:(e.clientY-r.top-(r.height-2560*scale)/2)/scale};
+ }
+ function draw(time){
+  ctx.clearRect(0,0,2048,2560);ctx.drawImage(base,0,0);
+  for(const p of parts){
+   let alpha=1;
+   if(!p.green&&p.blink&&!down&&!reduced.matches){
+    let phase=(time*1.15+p.phase)%(p.blinkPeriod||18000);
+    if(p.blinkPhases)for(const offset of p.blinkPhases)phase=Math.min(phase,(time*1.15+offset)%p.blinkPeriod);
+    if(phase<720)alpha=(1+Math.cos(Math.PI*phase/720))/2;
+    else if(phase<1260)alpha=0;
+    else if(phase<1980)alpha=(1-Math.cos(Math.PI*(phase-1260)/720))/2;
+   }
+   ctx.globalAlpha=alpha;
+   ctx.drawImage(atlas,p.x,p.y,p.w,p.h,p.x+p.dx,p.y+p.dy,p.w,p.h);
+  }
+  ctx.globalAlpha=1;
+ }
+ function tick(time){
+  frame=0;if(!ready||home.hidden||document.hidden)return;
+  const dt=Math.min((time-(last||time))/16.667,2)*.9;last=time;
+  let moving=false;
+  for(const p of parts){
+   p.vx+=(-p.dx*.025-p.vx*.16)*dt;p.vy+=(-p.dy*.025-p.vy*.16)*dt;
+   p.dx=clamp(p.dx+p.vx*dt,-160,160);p.dy=clamp(p.dy+p.vy*dt,-160,160);
+   if(Math.abs(p.dx)+Math.abs(p.dy)+Math.abs(p.vx)+Math.abs(p.vy)>.08)moving=true;
+   else p.dx=p.dy=p.vx=p.vy=0;
+  }
+  if(time-painted>=32||!painted){draw(time);painted=time}
+  if(!reduced.matches||moving)frame=requestAnimationFrame(tick);else last=0;
+ }
+ function start(){if(ready&&!home.hidden&&!document.hidden&&!frame){last=0;frame=requestAnimationFrame(tick)}}
+ function stop(){cancelAnimationFrame(frame);frame=0;last=0;down=null;for(const p of parts)p.dx=p.dy=p.vx=p.vy=0;if(ready)draw(performance.now())}
+ const load=(im,src)=>new Promise((resolve,reject)=>{im.onload=resolve;im.onerror=reject;im.src=src});
+ Promise.all([load(base,'token-base.png'),load(atlas,'token-pixels.png')]).then(()=>{ready=true;image.after(canvas);image.style.visibility='hidden';draw(performance.now());start()}).catch(()=>{canvas.remove();image.style.visibility='visible'});
+ home.addEventListener('dragstart',e=>e.preventDefault());
+ home.addEventListener('pointerdown',e=>{
+  if(!ready||!e.isPrimary||e.button!==0||e.target.closest('button,a')||document.body.classList.contains('menu-open'))return;
+  const p=point(e);if(p.x<0||p.x>2048||p.y<0||p.y>2560)return;
+  e.preventDefault();window.getSelection()?.removeAllRanges();
+  down={id:e.pointerId,x:p.x,y:p.y};home.setPointerCapture(e.pointerId);start();
+ });
+ home.addEventListener('pointermove',e=>{
+  if(!down||down.id!==e.pointerId)return;
+  const p=point(e),dx=clamp(p.x-down.x,-90,90),dy=clamp(p.y-down.y,-90,90);
+  for(const cell of parts){
+   const d=Math.hypot(cell.x+cell.w/2+cell.dx-p.x,cell.y+cell.h/2+cell.dy-p.y);
+   if(d<360){const force=(1-d/360)*.495;cell.vx=clamp(cell.vx+dx*force,-45,45);cell.vy=clamp(cell.vy+dy*force,-45,45)}
+  }
+  down.x=p.x;down.y=p.y;start();
+ });
+ const release=e=>{if(down&&down.id===e.pointerId){down=null;if(home.hasPointerCapture(e.pointerId))home.releasePointerCapture(e.pointerId);start()}};
+ home.addEventListener('pointerup',release);home.addEventListener('pointercancel',release);home.addEventListener('lostpointercapture',()=>down=null);
+ new MutationObserver(()=>{if(home.hidden)stop();else start()}).observe(home,{attributes:true,attributeFilter:['hidden']});
+ document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();else start()});
+ reduced.addEventListener('change',()=>{stop();start()});
+})();
+
+</script>
+</body></html>
