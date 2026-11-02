@@ -77,6 +77,14 @@ main:has(.studio-view:not([hidden])){padding:0}
 .contact-row p:last-child{margin-bottom:0}
 .contact-row .contact-work{font-size:clamp(15px,1.9vw,29px);margin:0;padding-right:1vw}
 .contact-links{overflow-wrap:anywhere}
+.contact-links a{color:inherit;text-decoration:none}
+.contact-links a:hover{text-decoration:underline}
+.contact-links a:focus-visible{outline:2px solid #255fff;outline-offset:3px}
+.contact-name,.contact-work,.contact-links{min-width:0}
+.contact-work{overflow-wrap:anywhere;word-break:keep-all}
+.artists-list{text-align:left;word-break:normal;line-height:1.5}
+.artists-list span{white-space:nowrap}
+.about-copy .website-credit{margin:1.4em 0 0;font-size:.85em;font-weight:400;text-align:left}
 .works-view{padding:9.4vh 17vw 7vh 20vw}
 .works-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:4.5vw;row-gap:9.5vh;align-items:start}
 .work-card{display:block;color:#555;text-decoration:none;justify-self:center;width:75%;transition:filter .2s}
@@ -121,15 +129,20 @@ main:has(.studio-view:not([hidden])){padding:0}
 .about-copy{font-size:calc(14 * var(--screen-unit));line-height:1.4;padding-top:calc(16 * var(--screen-unit))}
 .about-description{margin-top:calc(46 * var(--screen-unit))}
 .about-artists{margin-top:calc(32 * var(--screen-unit))}
-.contact-sheet{width:calc(934 * var(--screen-unit));min-height:100dvh;padding:calc(var(--stage-top) + 120 * var(--screen-unit)) calc(50 * var(--screen-unit)) calc(56 * var(--screen-unit));gap:0;display:grid;grid-template-rows:repeat(7,calc(82 * var(--screen-unit))) calc(50 * var(--screen-unit));align-content:start}
-.contact-row{grid-template-columns:222fr 464fr 148fr;gap:0;font-size:calc(16 * var(--screen-unit));align-items:start;line-height:1.35}
+.contact-sheet{width:calc(934 * var(--screen-unit));min-height:100dvh;padding:calc(var(--stage-top) + 120 * var(--screen-unit)) calc(50 * var(--screen-unit)) calc(56 * var(--screen-unit));gap:0;display:grid;grid-template-rows:none;grid-auto-rows:minmax(calc(82 * var(--screen-unit)),auto);align-content:start}
+.contact-row{grid-template-columns:minmax(0,222fr) minmax(0,464fr) minmax(0,148fr);gap:0;font-size:calc(16 * var(--screen-unit));align-items:start;line-height:1.35}
 .contact-row p{margin-bottom:calc(8 * var(--screen-unit))}
 .contact-row .contact-work{font-size:calc(28 * var(--screen-unit));padding-top:calc(5 * var(--screen-unit));padding-right:calc(12 * var(--screen-unit))}
 .works-view{padding:calc(var(--stage-top) + 75 * var(--screen-unit)) 0 calc(54 * var(--screen-unit))}
-.works-grid{display:block;position:relative;width:calc(885 * var(--screen-unit));height:calc(666 * var(--screen-unit));margin:0 auto;transform:translateX(calc(14 * var(--screen-unit)))}
-.work-card{position:absolute;width:calc(212 * var(--screen-unit));margin:0}
-.work-card-1{left:0;top:0}.work-card-2{left:calc(316 * var(--screen-unit));top:0;width:calc(190 * var(--screen-unit))}.work-card-3{left:calc(650 * var(--screen-unit));top:0}
-.work-card-4{left:0;top:calc(413 * var(--screen-unit))}.work-card-5{left:calc(276 * var(--screen-unit));top:calc(413 * var(--screen-unit));width:calc(283 * var(--screen-unit))}.work-card-6{left:calc(603 * var(--screen-unit));top:calc(413 * var(--screen-unit));width:calc(282 * var(--screen-unit))}
+.works-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:calc(45 * var(--screen-unit));row-gap:calc(88 * var(--screen-unit));align-items:start;width:calc(885 * var(--screen-unit));height:auto;margin:0 auto;transform:translateX(calc(14 * var(--screen-unit)))}
+.work-card{position:relative;left:auto;top:auto;width:100%;margin:0;justify-self:center}
+.work-card:nth-child(6n + 2) .work-image-placeholder{aspect-ratio:190/338}
+.work-card:nth-child(6n + 4) .work-image-placeholder{aspect-ratio:212/253}
+.work-card:nth-child(6n + 5) .work-image-placeholder{aspect-ratio:283/212}
+.work-card:nth-child(6n + 6) .work-image-placeholder{aspect-ratio:282/170}
+.work-card img{display:block;width:100%;height:auto}
+.work-detail-image.has-image{aspect-ratio:auto;background:transparent}
+.work-detail-image.has-image img{height:auto}
 .work-image-placeholder{font-size:calc(18 * var(--screen-unit));gap:calc(10 * var(--screen-unit))}.work-image-placeholder small{font-size:calc(11 * var(--screen-unit))}
 .work-detail-view{padding:calc(var(--stage-top) + 130 * var(--screen-unit)) 0 calc(40 * var(--screen-unit))}
 .work-detail-layout{width:calc(1018 * var(--screen-unit));margin:auto;grid-template-columns:450fr 496fr;gap:calc(72 * var(--screen-unit))}
@@ -140,12 +153,13 @@ main:has(.studio-view:not([hidden])){padding:0}
 .works-back{font-size:calc(12 * var(--screen-unit));margin-top:calc(16 * var(--screen-unit))}
 .work-detail-copy{font-size:calc(14 * var(--screen-unit));line-height:1.15}
 .work-description{margin-top:calc(48 * var(--screen-unit))}
+.work-description p{white-space:pre-line}
 
 
 .archives-view{padding:calc(var(--stage-top) + 146 * var(--screen-unit)) 0 calc(65 * var(--screen-unit))}
 .archive-gallery{position:relative;width:calc(936 * var(--screen-unit));margin:auto}
 .archive-image{width:100%;aspect-ratio:936/526;border:1px solid #222;background:#e4e4e1;display:flex;align-items:center;justify-content:center;font-size:calc(16 * var(--screen-unit));color:#666}
-.archive-image img{display:block;width:100%;height:100%;object-fit:contain}
+.archive-image img{display:block;width:100%;height:100%;object-fit:cover}
 .archive-arrow{position:absolute;top:calc(239 * var(--screen-unit));width:calc(50 * var(--screen-unit));height:calc(50 * var(--screen-unit));padding:0;border:0;background:none;font-size:calc(36 * var(--screen-unit));line-height:1}
 .archive-prev{left:calc(-94 * var(--screen-unit))}.archive-next{right:calc(-94 * var(--screen-unit))}
 .archive-thumbnails{display:flex;justify-content:center;gap:calc(8 * var(--screen-unit));margin-top:calc(18 * var(--screen-unit))}
@@ -252,9 +266,9 @@ main:has(.comment-view:not([hidden])){padding:0}
 <p>토큰은 하나의 생각을 이어가기 위한 조건이자 가능성이다. 이는 AI의 기술적 단위로서가 아니라 새로운 생각을 이끄는 조건으로, 우리를 완성된 결과가 아닌 계속되는 과정 위에 서 있게 한다. 졸업이라는 하나의 지점에 다다랐지만, 이들이 제시하는 작업은 마침표가 아닌 또 다른 질문의 시작이다. 완성되지 않았기에 다시 시작할 수 있고, 아직 도착하지 않았기에 더 먼 가능성을 향해 나아갈 수 있다.</p>
 <p>곧 동이 틀 새벽과 같은 이곳에서 각자의 사유가 피워낸 고유한 가능성들을 즐겁게 마주하길 바란다.</p>
 </div>
-<div class="about-artists"><h3>참여작가</h3><p class="artists-pending">참여작가 명단 준비 중</p></div>
+<div class="about-artists"><h3>참여작가</h3><p class="artists-list"><span>강민지</span> <span>강제완</span> <span>강해빈</span> <span>김류나</span> <span>김수홍</span> <span>박지훈</span> <span>박희주</span> <span>연채민</span> <span>염은진</span> <span>이다혜</span> <span>이아령</span> <span>이지안</span> <span>이지예</span> <span>이채영</span> <span>장아란</span> <span>장혜란</span> <span>전서희</span> <span>정민선</span> <span>전희원</span> <span>조여영</span> <span>조혜원</span> <span>채시원</span></p><p class="website-credit">웹사이트 제작 · 강예빈</p></div>
 </div></div></section>
-<section id="works" class="view studio-view works-view" role="tabpanel" aria-labelledby="tab-works" hidden><a class="about-home" href="#home" aria-label="전시 첫 화면으로"><img src="home-icon.svg" alt="" aria-hidden="true"></a><h2 class="sr-only">WORKS</h2><div class="works-grid"><a class="work-card work-card-1" href="#works/1" aria-label="작품 01 상세 보기"><span class="work-image-placeholder">WORK 01<small>이미지 준비 중</small></span></a><a class="work-card work-card-2" href="#works/2" aria-label="작품 02 상세 보기"><span class="work-image-placeholder">WORK 02<small>이미지 준비 중</small></span></a><a class="work-card work-card-3" href="#works/3" aria-label="작품 03 상세 보기"><span class="work-image-placeholder">WORK 03<small>이미지 준비 중</small></span></a><a class="work-card work-card-4" href="#works/4" aria-label="작품 04 상세 보기"><span class="work-image-placeholder">WORK 04<small>이미지 준비 중</small></span></a><a class="work-card work-card-5" href="#works/5" aria-label="작품 05 상세 보기"><span class="work-image-placeholder">WORK 05<small>이미지 준비 중</small></span></a><a class="work-card work-card-6" href="#works/6" aria-label="작품 06 상세 보기"><span class="work-image-placeholder">WORK 06<small>이미지 준비 중</small></span></a></div></section><section id="work-detail" class="view studio-view work-detail-view" aria-labelledby="work-title" hidden><a class="about-home" href="#home" aria-label="전시 첫 화면으로"><img src="home-icon.svg" alt="" aria-hidden="true"></a><div class="work-detail-layout"><div class="work-gallery"><div id="work-image" class="work-detail-image" role="img" aria-label="작품 이미지 준비 중"></div><div id="work-thumbnails" class="work-thumbnails" aria-label="작품 이미지 선택"></div><a class="works-back" href="#works">← WORKS</a></div><div class="work-detail-copy"><h2 id="work-title"></h2><p id="work-artist"></p><p id="work-specs"></p><div id="work-description" class="work-description"></div></div></div></section>
+<section id="works" class="view studio-view works-view" role="tabpanel" aria-labelledby="tab-works" hidden><a class="about-home" href="#home" aria-label="전시 첫 화면으로"><img src="home-icon.svg" alt="" aria-hidden="true"></a><h2 class="sr-only">WORKS</h2><div class="works-grid" aria-label="작품 목록"></div></section><section id="work-detail" class="view studio-view work-detail-view" aria-labelledby="work-title" hidden><a class="about-home" href="#home" aria-label="전시 첫 화면으로"><img src="home-icon.svg" alt="" aria-hidden="true"></a><div class="work-detail-layout"><div class="work-gallery"><div id="work-image" class="work-detail-image" role="img" aria-label="작품 이미지 준비 중"></div><div id="work-thumbnails" class="work-thumbnails" aria-label="작품 이미지 선택"></div><a class="works-back" href="#works">← WORKS</a></div><div class="work-detail-copy"><h2 id="work-title"></h2><p id="work-artist"></p><p id="work-specs"></p><div id="work-description" class="work-description"></div></div></div></section>
 <section id="archives" class="view studio-view archives-view" role="tabpanel" aria-labelledby="tab-archives" hidden><a class="about-home" href="#home" aria-label="전시 첫 화면으로"><img src="home-icon.svg" alt="" aria-hidden="true"></a><h2 class="sr-only">ARCHIVES</h2><div class="archive-gallery" aria-roledescription="캐러셀" aria-label="전시 아카이브"><button id="archive-prev" class="archive-arrow archive-prev" aria-label="이전 이미지">〈</button><div id="archive-image" class="archive-image" role="img" aria-label="아카이브 이미지 준비 중"></div><button id="archive-next" class="archive-arrow archive-next" aria-label="다음 이미지">〉</button><div id="archive-thumbnails" class="archive-thumbnails" aria-label="아카이브 이미지 선택"></div><p id="archive-status" class="sr-only" aria-live="polite"></p></div></section>
 <section id="comment" class="view comment-view" role="tabpanel" aria-labelledby="tab-comment" hidden><a class="about-home" href="#home" aria-label="전시 첫 화면으로"><img src="home-icon.svg" alt="" aria-hidden="true"></a><h2 class="sr-only">COMMENT</h2><div class="comment-switch" role="tablist" aria-label="방명록 화면"><button id="comment-compose-tab" role="tab" aria-selected="true" aria-controls="comment-compose">남기기</button><button id="comment-records-tab" role="tab" aria-selected="false" aria-controls="comment-records" tabindex="-1">기록보기</button></div><div id="comment-compose" class="comment-compose" role="tabpanel" aria-labelledby="comment-compose-tab"><h3>익명님, 방명록을 생성해볼까요?</h3></div><div id="comment-records" class="comment-records" role="tabpanel" aria-labelledby="comment-records-tab" hidden><div id="comment-messages" class="comment-messages" aria-label="방명록 기록"></div></div><form id="comment-form" class="comment-form"><button id="comment-camera-toggle" type="button" aria-label="카메라 열기" aria-controls="comment-camera" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 6.5h4l1.5-2h5l1.5 2h4v13H4Z"/><circle cx="12" cy="12.5" r="3.5"/></svg></button>
 <div id="comment-camera" class="comment-camera" role="region" aria-label="사진 촬영" hidden>
@@ -263,7 +277,30 @@ main:has(.comment-view:not([hidden])){padding:0}
 </div>
 <div id="comment-photo-preview" class="comment-photo-preview" hidden><img id="comment-photo-image" alt="첨부할 사진"><button id="comment-photo-remove" type="button" aria-label="첨부 사진 삭제"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div>
 <label class="sr-only" for="comment-input">방명록 남기기</label><textarea id="comment-input" rows="1" maxlength="2000" placeholder="전시에 대한 생각과 사진을 남겨주세요."></textarea><button id="comment-submit" type="submit" aria-label="방명록 전송" disabled><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 19V5m-6 6 6-6 6 6"/></svg></button></form><p id="comment-status" class="comment-status" role="status"></p></section>
-<section id="contact" class="view studio-view contact-view" role="tabpanel" aria-labelledby="tab-contact" hidden><a class="about-home" href="#home" aria-label="전시 첫 화면으로"><img src="home-icon.svg" alt="" aria-hidden="true"></a><h2 class="sr-only">CONTACT</h2><div class="contact-sheet" aria-hidden="true"></div></section>
+<section id="contact" class="view studio-view contact-view" role="tabpanel" aria-labelledby="tab-contact" hidden><a class="about-home" href="#home" aria-label="전시 첫 화면으로"><img src="home-icon.svg" alt="" aria-hidden="true"></a><h2 class="sr-only">CONTACT</h2><div class="contact-sheet" aria-label="참여작가 연락처">
+<div class="contact-row"><div class="contact-name"><p>강민지</p><p lang="en">Minji Kang</p></div><p class="contact-work">선녀가 춤추며 하늘로 올라간다</p><div class="contact-links"><a href="mailto:mpqm5555@naver.com">mpqm5555@naver.com</a></div></div>
+<div class="contact-row"><div class="contact-name"><p>강제완</p><p lang="en">Jewan Kang</p></div><p class="contact-work">연우를 찾아서</p><div class="contact-links"><a href="mailto:jewankang.seoul@gmail.com">jewankang.seoul@gmail.com</a></div></div>
+<div class="contact-row"><div class="contact-name"><p>강해빈</p><p lang="en">Haevin Kang</p></div><p class="contact-work">산호</p><div class="contact-links"><a href="mailto:haevin_kang@kookmin.ac.kr">haevin_kang@kookmin.ac.kr</a></div></div>
+<div class="contact-row"><div class="contact-name"><p>김류나</p><p lang="en">Ryuna Kim</p></div><p class="contact-work">이모저모</p><div class="contact-links"><a href="mailto:ryunak03@gmail.com">ryunak03@gmail.com</a></div></div>
+<div class="contact-row"><div class="contact-name"><p>김수홍</p><p lang="en">Suhong Kim</p></div><p class="contact-work">마른 풀과 가지</p><div class="contact-links"><a href="mailto:suhong131@naver.com">suhong131@naver.com</a></div></div>
+<div class="contact-row"><div class="contact-name"><p>박지훈</p><p lang="en">Jihun Park</p></div><p class="contact-work">Fake Plastic Faith</p><div class="contact-links"><a href="mailto:hhoon2011@naver.com">hhoon2011@naver.com</a></div></div>
+<div class="contact-row"><div class="contact-name"><p>박희주</p><p lang="en">Heeju Park</p></div><p class="contact-work">Fairy Ring</p><div class="contact-links"><a href="mailto:doolisuwu@gmail.com">doolisuwu@gmail.com</a></div></div>
+<div class="contact-row"><div class="contact-name"><p>연채민</p><p lang="en">Chaemin Yeon</p></div><p class="contact-work">아무도 모르는 곳에서 자란다.</p><div class="contact-links"><a href="mailto:liz_yeon@naver.com">liz_yeon@naver.com</a></div></div>
+<div class="contact-row"><div class="contact-name"><p>염은진</p><p lang="en">Eunjin Yeom</p></div><p class="contact-work">I wanna do something unhinged : 나 이제 도망갈래</p><div class="contact-links"><a href="mailto:eunjinyeom9@gmail.com">eunjinyeom9@gmail.com</a></div></div>
+<div class="contact-row"><div class="contact-name"><p>이다혜</p><p lang="en">Dahye Lee</p></div><p class="contact-work">영점도시 연작</p><div class="contact-links"><a href="mailto:leesuhye1006@gmail.com">leesuhye1006@gmail.com</a></div></div>
+<div class="contact-row"><div class="contact-name"><p>이아령</p><p lang="en">A-ryeong Lee</p></div><p class="contact-work">잠시 내려놓아도 될까</p><div class="contact-links"><a href="mailto:2dumbell@gmail.com">2dumbell@gmail.com</a></div></div>
+<div class="contact-row"><div class="contact-name"><p>이지안</p><p lang="en">Jian Lee</p></div><p class="contact-work">cynn_2</p><div class="contact-links"><a href="mailto:sc.leejian@gmail.com">sc.leejian@gmail.com</a></div></div>
+<div class="contact-row"><div class="contact-name"><p>이지예</p><p lang="en">Jiye Lee</p></div><p class="contact-work">빛이 머문 자리</p><div class="contact-links"><a href="mailto:leelaura0331@gmail.com">leelaura0331@gmail.com</a></div></div>
+<div class="contact-row"><div class="contact-name"><p>이채영</p><p lang="en">Chaeyoung Lee</p></div><p class="contact-work">끝내 남는 것</p><div class="contact-links"><a href="mailto:kelly2797@naver.com">kelly2797@naver.com</a></div></div>
+<div class="contact-row"><div class="contact-name"><p>장아란</p><p lang="en">Aran Jang</p></div><p class="contact-work">Love</p><div class="contact-links"><a href="mailto:aran2300@kookmin.ac.kr">aran2300@kookmin.ac.kr</a></div></div>
+<div class="contact-row"><div class="contact-name"><p>장혜란</p><p lang="en">Hyeran Chang</p></div><p class="contact-work">포니테일의 언발란스</p><div class="contact-links"><a href="mailto:jhr3798@gmail.com">jhr3798@gmail.com</a></div></div>
+<div class="contact-row"><div class="contact-name"><p>전서희</p><p lang="en">Seohui Jeon</p></div><p class="contact-work">인기척</p><div class="contact-links"><a href="mailto:tjgml9749@naver.com">tjgml9749@naver.com</a></div></div>
+<div class="contact-row"><div class="contact-name"><p>정민선</p><p lang="en">Minsun Jung</p></div><p class="contact-work">액체적자아</p><div class="contact-links"><a href="mailto:jsgood147@naver.com">jsgood147@naver.com</a></div></div>
+<div class="contact-row"><div class="contact-name"><p>전희원</p><p lang="en">Heewon Jeon</p></div><p class="contact-work">Hit the sun</p><div class="contact-links"><a href="mailto:jhw8027@naver.com">jhw8027@naver.com</a></div></div>
+<div class="contact-row"><div class="contact-name"><p>조여영</p><p lang="en">Yeoyeong Cho</p></div><p class="contact-work">무집착을 향한 집착</p><div class="contact-links"><span aria-label="이메일 미제공">—</span></div></div>
+<div class="contact-row"><div class="contact-name"><p>조혜원</p><p lang="en">Hyewon Cho</p></div><p class="contact-work">수석 시리즈</p><div class="contact-links"><a href="mailto:jhw020827@kookmin.ac.kr">jhw020827@kookmin.ac.kr</a></div></div>
+<div class="contact-row"><div class="contact-name"><p>채시원</p><p lang="en">Siwon Chai</p></div><p class="contact-work">Sound of Time, Time of Sound</p><div class="contact-links"><a href="mailto:christina_10@naver.com">christina_10@naver.com</a></div></div>
+</div></section>
 </main>
 <aside id="exhibition-menu" class="sidebar" role="dialog" aria-modal="true" aria-label="전시 메뉴" inert><nav class="nav-buttons" role="tablist" aria-label="전시 정보" aria-orientation="vertical"><button id="tab-about" role="tab" aria-controls="about" aria-selected="false" data-view="about"><span class="menu-label">ABOUT</span></button><button id="tab-contact" role="tab" aria-controls="contact" aria-selected="false" data-view="contact"><span class="menu-label">CONTACT</span></button><button id="tab-works" role="tab" aria-controls="works" aria-selected="false" data-view="works"><span class="menu-label">WORKS</span></button><button id="tab-archives" role="tab" aria-controls="archives" aria-selected="false" data-view="archives"><span class="menu-label">ARCHIVES</span></button><button id="tab-comment" role="tab" aria-controls="comment" aria-selected="false" data-view="comment"><span class="menu-label">COMMENT</span></button></nav></aside>
 <script>
@@ -298,14 +335,442 @@ document.addEventListener('keydown',event=>{
  }
 });
 const tabs=[...document.querySelectorAll('[data-view]')];
-// Replace these placeholders with the final artist details and PNG paths.
-// images: [{src:'images/work-01-1.png', alt:'작품 정면'}, ...]
-const artworks=Array.from({length:6},(_,i)=>({id:String(i+1),title:`작품 ${String(i+1).padStart(2,'0')}`,artist:'작가명 준비 중',specs:'재료 · 크기 · 제작연도 준비 중',description:['작품 설명 준비 중입니다. 이미지와 최종 원고를 받으면 이곳에 반영됩니다.'],images:[null,null,null]}));
+// Works follow works_text.txt order. English names and email addresses are reserved for Contact.
+// Replace null images with {src:"images/work-01-1.png", alt:"작품 정면"}.
+const artworks=[
+  {
+    "id": "1",
+    "title": "선녀가 춤추며 하늘로 올라간다",
+    "artist": "강민지",
+    "specs": "2026, PLA",
+    "description": [
+      "이 작품은 <선녀와 나무꾼>이라는 동화로 인해 만들어졌다. 어렸을 적 한 번쯤 읽어봤을 이 이야기는 나무꾼에게 은혜를 입은 사슴이 결혼을 하고 싶다는 나무꾼에게 선녀의 날개옷을 훔치라고 조언하고, 정말로 나무꾼이 옷을 훔치며 시작한다. 하늘로 돌아갈 수 없게 된 선녀는 나무꾼과 혼인하여 결혼 생활을 하고 아이도 낳는다. 하지만 결국 숨겨둔 날개옷을 되찾은 선녀는 나무꾼만 남겨두고 하늘로 올라간다. \n 이렇게 끝난 이야기에 나무꾼은 옷을 훔칠 때 이런 결과는 예상하지 못했는지, 하늘로 돌아간 이후의 선녀는 어떻게 살았는지 등의 질문이 생겼다. 개중 이목을 끈 주제는 '애초에 옷을 도둑맞지 않았다면 어땠을까?' 였다. 나무꾼은 그가 선택이라도 한 셈이지만 선녀는 옷을 도둑맞은 순간부터 본인의 의지대로 움직일 수 없었다. 목욕을 마치고 다른 선녀들과 함께 하늘로 올라갔다면, 본인이 생각하는 대로 살아갈 수 있었을지도 모른다. 그녀는 어떤 삶을 살 수 있었을까?"
+    ],
+    "images": [
+      {
+        "src": "works/1.jpeg",
+        "alt": "강민지, 선녀가 춤추며 하늘로 올라간다",
+        "width": 5568,
+        "height": 3712
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "title": "연우를 찾아서",
+    "artist": "강제완",
+    "specs": "2026, 스테인리스 스틸, 젖은 빨래, 알콜램프, 냄비, 소금물, 수집한 나무, 채집한 흙과 물, 옥수수, 핑크페퍼, 휘핑크림, 초콜릿, 휘핑기, 비커, AI 생성 이미지, 아크릴판, 씨몽키, 가변설치",
+    "description": [],
+    "images": [
+      {
+        "src": "works/2.jpeg",
+        "alt": "강제완, 연우를 찾아서",
+        "width": 5568,
+        "height": 3712
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "title": "산호",
+    "artist": "강해빈",
+    "specs": "2026, PLA, 가변설치",
+    "description": [
+      "자연물이 만들어 내는 불규칙하고 예측하기 어려운 형태에 관심을 두고 작업을 시작했습니다. 그중에서도 산호는 일정한 구조를 반복하면서도 각기 다른 방향으로 뻗어 나가는 모습이 인상적이었습니다. 이러한 산호의 유기적인 형태를 디지털 프로그램 속 수치와 명령어를 통해 재구성하고, 3D 프린팅으로 출력해 하나의 조형물로 구현했습니다.",
+      "이 작업은 자연적인 것과 인공적인 것이 만나는 과정에 주목합니다. 자유롭게 뻗어 나가는 자연의 형태는 디지털 프로그램을 거치며 계산되고 통제 가능한 형태로 변환되고, 다시 3D 프린팅이라는 인공적인 제작 과정을 통해 물질로 구현됩니다. 이 과정에서 발생하는 형태의 변화와 그 사이에서 형성되는 조형적 아름다움을 탐구하고자 했습니다.",
+      "또한 작품을 하나의 완성된 형태로 고정하기보다, 산호가 여러 방향으로 뻗어 나가며 성장하듯 증식하고 확장할 수 있는 구조로 구성했습니다. 이를 통해 작품이 설치되는 공간과 환경에 따라 새로운 형태와 규모를 만들어 내며, 자연의 성장 방식이 디지털 기술을 통해 재해석되고 확장될 수 있는 가능성을 제시하고자 합니다."
+    ],
+    "images": [
+      {
+        "src": "works/3.jpeg",
+        "alt": "강해빈, 산호",
+        "width": 3712,
+        "height": 5568
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "title": "이모저모",
+    "artist": "김류나",
+    "specs": "2026, 오쿠메합판, 109*37*50",
+    "description": [
+      "나는 하나의 사물이 반드시 하나의 모습으로 남아야 하는지 궁금했다. 구조는 형태를 지탱하지만 동시에 그 형태를 제한하기도 한다. 그렇다면 정해진 틀을 바꾸지 않고도 얼마나 멀리 달라질 수 있을까. 이 작업은 같은 것이 다른 것이 되는 순간을 찾는 과정이다.",
+      "한옥에서 흥미로웠던 것은 특정한 양식보다 공간이 작동하는 방식이었다. 기둥과 보가 자리를 지키는 동안 창호는 열리고 닫히며 안과 밖, 보이는 것과 가려지는 것의 관계를 바꾼다. 나는 그 움직임을 격자 구조의 가구로 옮겼다. 기와의 곡선을 닮은 모듈이 반복되고, 채워진 자리와 비워진 자리가 번갈아 나타난다. 같은 구조는 낮게 이어지기도 하고 높이 쌓이기도 하며, 보는 방향에 따라 다른 리듬을 만든다.",
+      "가구는 흔히 쓰임과 모양이 먼저 정해진 물건으로 여겨진다. 그러나 이 작업에서 기능은 하나의 답이 아니라 여러 가능성 중 하나다. 비어 있는 자리는 부족한 부분이 아니라 다른 선택을 기다리는 공간이고, 반복은 같은 모습을 복제하는 대신 차이를 드러낸다. 하나의 모습이 완성이라고 생각하는 순간에도 다른 배열은 가능하다. 결국 어떤 형태도 유일한 정답일 필요는 없다. 나는 익숙한 물건이 익숙한 이름에서 잠시 벗어나는 순간, 그 사이에 생겨나는 낯선 풍경을 보여주고 싶었다."
+    ],
+    "images": [
+      null
+    ]
+  },
+  {
+    "id": "5",
+    "title": "마른 풀과 가지",
+    "artist": "김수홍",
+    "specs": "2026,천,레진,시바툴,철,목재,우레탄 폼,아이소핑크,황동,아크릴,pla,에폭시,애나멜,휴지, 고무,1100*700*970,70*70*1820,270*270*1450,480*260*400",
+    "description": [
+      "마른 풀냄새가 가득했다.",
+      "오래된 것들 위로 새로운 것들이 자라고, 그 아래에는 미처 사라지지 못한 것들이 남아 있었다.",
+      "서로 달라붙고 뒤엉킨 가지들은 어느 것이 처음의 모습이었는지 알 수 없게 되었다."
+    ],
+    "images": [
+      {
+        "src": "works/5.jpeg",
+        "alt": "김수홍, 마른 풀과 가지",
+        "width": 5568,
+        "height": 3712
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "title": "Fake Plastic Faith",
+    "artist": "박지훈",
+    "specs": "2026, PLA, 150*150*240",
+    "description": [
+      "나는 좋은 형제, 좋은 아들, 좋은 학생, 좋은 사람이고 싶다.\n하지만 내가 되고 싶은 존재가 되기 위해서, \n나와 부딪히는 많은 점들을 감수해야 할 때가 있다. \n때로는 흉내를 내서라도 말이다.\n나는 집단이 원하는 자세와, 생각과, 몸동작을 흉내 낸다. \n마음에도 없는 말을 지어내고, 사람들 앞에서 읊을 가식적인 대본을 준비한다.\n표면적인 흉내에 만족해하는 사람들을 보며 나는 안도한다.  \n하지만 동시에, 사람들과 스스로를 속인다는 기분에 괴롭다. \n내가 취한 이 기형적인 자세가 과연 나인지, 아니면 허울 뿐인지 혼란스럽다.",
+      "한편 이런 생각도 든다. \n우리 모두 각자 속한 세계에서 안정을 찾기 위해,\n 무언가를 끊임없이 흉내 내며 살고 있지 않은가? \n사람들과 자신까지 속여 가며, 무언가를 연기해 본 적이 정말 없는가?\n오늘도 나는 나를 속이며 흉내를 이어간다.\n그리고 묻는다.",
+      "당신은 지금, 무엇을 흉내 내며 살아가고 있는가?"
+    ],
+    "images": [
+      {
+        "src": "works/6.jpeg",
+        "alt": "박지훈, Fake Plastic Faith",
+        "width": 3712,
+        "height": 5568
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "title": "Fairy Ring",
+    "artist": "박희주",
+    "specs": "2026, 혼합재료, 가변설치",
+    "description": [
+      "문장의 형태 조차 갖추지 못한 질문들은 마음대로 몸속에 그물을 쳤다가, 원하는 것을 찾지 못하면 그대로 몸 밖으로 기어 나간 듯했다. \n때로는 그 모호한 것들에 표면을 부여해 몸 밖으로 옮겨 놓기도 하고, 때로는 답을 알 수 없는 것들로 부터 달아나듯 다음 질문으로 눈을 돌렸다.\n피하건 쥐었건 지나온 것들은 저마다 독립적인 존재가 되어 멀어지는 듯 했다.\n하지만 그 작은 포자들은 어디로 간 것도 아니고, 이미 선택과 행동에 실타래를 감아 현재의 일부를 이루고 있었다.\n땅 아래로 뻗어나간 균사체가 여러곳을 도망치다 고리를 만들어 보이듯, 발이 닿았던 자리에는 한  사람을 이루는 것이 어쨌건 남아있을것이다."
+    ],
+    "images": [
+      {
+        "src": "works/7.jpeg",
+        "alt": "박희주, Fairy Ring",
+        "width": 5568,
+        "height": 3712
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "title": "아무도 모르는 곳에서 자란다.",
+    "artist": "연채민",
+    "specs": "2026, PLA, 230*92*15",
+    "description": [
+      "삶은 끊임없는 선택의 연속이다. 그렇다면 우리는 무엇을 바탕으로 다음 길을 고르는가?",
+      "나는 선택의 이유가 어느 날 갑자기 생기는 것이 아니라, 지나온 기억과 경험이 함께 쌓이며 만들어진다고 생각한다. 기억은 실제의 일을 그대로 보관한 기록이라기보다, 시간이 흐르며 덧붙고 달라지는 이야기와 닮아 있다. 같은 경험도 지금의 시야에 따라 다르게 떠오른다. 한때 실패라 여긴 일은 훗날 다른 길을 찾게 하는 단서가 되기도 한다. 과거는 우리에게 지혜를 건네지만, 익숙한 방식 너머를 보지 못하게 하기도 한다.",
+      "작품 속 뿌리처럼 뻗은 선들은 그렇게 쌓인 경험과 선택의 흔적이다. 선들은 모이고 갈라진다. 때로는 끊어진 듯하다가 뜻밖의 방향에서 다시 만난다. 그 사이의 빈 곳에는 잊힌 기억과 아직 선택되지 않은 가능성이 머문다. 삶의 모든 갈림길을 미리 설명할 수는 없다. 우연처럼 보이는 만남과 실패도 다음 선택에 새로운 실마리를 보탠다.",
+      "나는 얽힌 선들을 따라가며 지금의 나를 만든 이유들을 되짚어본다. 길을 잃은 순간이 있었기에 비로소 만난 풍경처럼, 선택의 이유는 지나온 시간 속에서 뒤늦게 모습을 드러내기도 한다. 우리의 삶은 이미 정해진 길이 아니다. 기억과 우연이 만나 계속 새로 그려지는 구조인지도 모른다."
+    ],
+    "images": [
+      {
+        "src": "works/8.jpeg",
+        "alt": "연채민, 아무도 모르는 곳에서 자란다.",
+        "width": 5180,
+        "height": 3454
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "title": "I wanna do something unhinged : 나 이제 도망갈래",
+    "artist": "염은진",
+    "specs": "2026, metal, 가변설치",
+    "description": [
+      "나는 익숙한 일상의 궤도에서 벗어났던 여행의 감각을 금속으로 옮기고자 했다. 낯선 장소에서 마주한 풍경은 당연하게 여겼던 것들을 새롭게 보게 했고, 그 순간의 자유로움은 작업의 출발점이 되었다. 단단한 금속판을 서로 다른 방향으로 뻗게 하고 그 사이에 빈 공간을 남겼다. 정해진 틀 안에 있으면서도 바깥을 향하는 움직임, 아직 도달하지 않은 가능성을 그 공간에 담고 싶었다. 작품의 형태는 사람을 떠올리게 하지만 특정한 인체를 재현하지 않는다. 익숙한 신체의 균형을 조금씩 흔들어 멈춤과 나아감이 공존하는 순간을 만들고자 했다.\n금속판 위에 흩뿌리듯 배치한 동그라미는 여행에서 만난 낯선 장면과 감각이 일상에 남긴 흔적이다. 반복되는 원은 매일 이어지는 삶의 궤도를 떠올리게 하지만, 크기와 색이 다르고 일정한 질서를 따르지 않는 배치는 그 흐름에 작은 어긋남을 만든다. 나는 이 원들을 통해 익숙한 반복 속에서도 새로운 감각이 피어날 수 있음을 표현하고 싶었다. 표면에 남은 결은 손으로 형태를 만들어 온 시간의 흔적이며, 빛은 보는 위치에 따라 금속과 무늬의 인상을 바꾼다. 단단함과 비어 있음, 반복과 불규칙함이 한 작품 안에서 긴장하도록 두었다. 나에게 일탈은 질서를 완전히 부수는 일이 아니라, 그 안에서 다른 방향을 상상하고 한 걸음 내딛는 순간이다. 이 작품이 그 잠깐의 자유를 떠올리게 하기를 바란다."
+    ],
+    "images": [
+      {
+        "src": "works/9.jpeg",
+        "alt": "염은진, I wanna do something unhinged : 나 이제 도망갈래",
+        "width": 5568,
+        "height": 3712
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "title": "영점도시 연작",
+    "artist": "이다혜",
+    "specs": "2026, 철, 가변설치",
+    "description": [
+      "도시는 어떻게 만들어지는가. 무엇이 하나를 이루고, 어떤 순간부터 그것을 도시라고 부를 수 있을까.",
+      "도시는 수많은 선택과 흔적이 축적되어 만들어진다. 처음에는 서로 무관했던 것들이 연결되고, 새로운 것이 더해지거나 오래된 것이 남겨지면서 저마다의 질서를 형성한다. 그렇게 만들어진 도시는 하나의 완성된 풍경처럼 보이지만, 그 안에는 서로 다른 방향과 시간이 겹쳐져 있다.",
+      "우리는 익숙한 공간에서 살아가며 그곳의 질서에 자연스럽게 적응한다. 그러나 지금의 모습이 처음부터 정해져 있었던 것은 아니다. 무엇을 받아들이고 남겨두었는지, 무엇을 외면하거나 잊었는지에 따라 풍경은 달라졌을 것이다. 눈에 보이는 구조가 모든 것을 설명해 주지는 않는다. 어떤 흔적은 선명하게 남고, 어떤 흔적은 드러나지 않은 채 전체의 모습을 이루기도 한다.",
+      "‘영점’은 모든 것이 사라진 자리이자 아직 아무것도 결정되지 않은 지점이다. 그곳에서 도시는 다시 시작된다. 이미 형성된 질서가 낯설어지고, 당연하게 여겨 온 기준에도 다른 가능성이 열린다. 완성되었다고 믿었던 풍경은 다시 변화할 수 있고, 끝이라고 생각한 자리에서도 새로운 시작이 생겨난다.",
+      "우리는 무엇을 기준으로 도시를 세우고 살아가는가. 어쩌면 우리가 바라보는 도시의 모습은 우리가 지나온 시간과 선택이 만들어 낸 풍경일지도 모른다."
+    ],
+    "images": [
+      {
+        "src": "works/10.jpeg",
+        "alt": "이다혜, 영점도시 연작",
+        "width": 5568,
+        "height": 3712
+      }
+    ]
+  },
+  {
+    "id": "11",
+    "title": "잠시 내려놓아도 될까",
+    "artist": "이아령",
+    "specs": "2026, 대리석,아연파이프, PETG 위 채색, 가변설치",
+    "description": [
+      "우리는 하루의 끝에 돌아갈 곳을 찾는다. 그곳에서 잠시 머물며 무게를 내려놓을 수 있으리라 생각하지만, 삶을 둘러싼 여러 조건은 그 공간 안까지 따라온다.",
+      "전시장에 주어진 큐브를 하나의 방처럼 바라보고, 동시대의 집을 떠올리게 하는 아파트의 윤곽을 파이프 구조물로 세웠다. 그 안은 비어 있고, 돌사슬은 골격 사이에 걸려 있다. 벽에서 시작된 커다란 사슬은 공간을 향해 늘어진다.",
+      "서로 다른 고리들은 이어져 하나의 구조를 이루고, 그 무게는 구조물과 공간 곳곳에 머문다. 사슬은 무언가를 붙들고 지탱하는 듯하면서도, 그 자리에 머무는 일을 무겁게 한다. 연결된 고리의 무게는 어디에 머물고, 어디까지 이어지는가.",
+      "‘잠시 내려놓아도 될까’라는 질문은 무게가 사라질 수 있는지를 묻기보다, 그것을 잠시 놓아둘 자리가 있는지를 향한다. 우리가 돌아와 머무는 곳은 언제 쉼이 되고, 언제 다시 짊어져야 할 무게가 되는가?"
+    ],
+    "images": [
+      {
+        "src": "works/11.jpeg",
+        "alt": "이아령, 잠시 내려놓아도 될까",
+        "width": 5568,
+        "height": 3712
+      }
+    ]
+  },
+  {
+    "id": "12",
+    "title": "cynn_2",
+    "artist": "이지안",
+    "specs": "2026, 세라믹, 가변설치",
+    "description": [
+      "우리는 태어나는 순간부터 수많은 관계 속에 놓인다. 그중 혈연은 스스로 선택하지 않았음에도 가장 당연한 연결로 받아들여진다. 나는 혈연관계에 따라 법적 책임이 달라지는 형법의 조항을 접하며, 혈연이라는 사실만으로 관계에 특별한 의미와 책임이 부여되는 이유에 의문을 품기 시작했다.",
+      "〈cynn_2〉는 이러한 질문을 이어가는 두 번째 작업이다. 혈연으로 연결된 개별적인 존재들을 재현하기보다, 혈연이라는 관계가 형성하는 구조 자체에 주목했다. 서로 다른 크기와 색을 지닌 각각의 개체들을 모으고 분산시키며, 그 사이에 생겨나는 거리와 밀도, 경계의 변화를 탐색했다. 군집은 개별 요소들의 단순한 집합이 아니라, 서로의 위치와 관계에 따라 달라지는 하나의 구조로 드러난다.",
+      "이 작업은 혈연을 긍정하거나 부정하려는 시도가 아니다. 다만 태어남과 동시에 주어진 관계를 잠시 낯선 시선으로 바라보며, 우리가 당연하게 받아들여 온 연결의 의미를 다시 묻고자 한다."
+    ],
+    "images": [
+      {
+        "src": "works/12.jpeg",
+        "alt": "이지안, cynn_2",
+        "width": 3712,
+        "height": 5568
+      }
+    ]
+  },
+  {
+    "id": "13",
+    "title": "빛이 머문 자리",
+    "artist": "이지예",
+    "specs": "2026, PETG, 가변설치",
+    "description": [
+      "나에게 윤슬은 복잡한 생각을 잠시 멈추고 온전히 한순간에 머물게 하는 빛이다.",
+      "평소 나는 주변의 작은 변화에도 쉽게 영향받고, 한 가지 생각에 깊이 빠져들곤 한다. 꼬리를 무는 생각들은 때때로 나를 지치게 하며, 사소한 감정과 고민에 오래 머물게 한다. 나의 작업은 이러한 일상에서 윤슬을 바라보며 내면이 고요해지는 경험에서 시작된다. 한강에서 물 위에 일렁이는 빛을 바라보던 순간, 주변의 소음과 복잡한 생각에서 벗어나 묘한 해방감과 자유를 느꼈다. 나는 자연스럽게 빛과 물의 움직임에 빠져들었고, 그 순간만큼은 나 자신을 한 걸음 떨어져 바라볼 수 있었다. 이후 마음에 소란이 일어날 때면 윤슬을 찾게 되었다. 나에게 윤슬은 얽힌 생각을 정리하고 마음을 비워내는 매개체이자, 일상의 무게에서 잠시 벗어날 수 있는 나만의 안식처가 되었다.",
+      "〈빛이 머문 자리〉는 윤슬을 바라보며 경험한 내면의 변화를 형상화한 작업이다. 제목 속 ‘빛이 머문 자리’는 물 위에 빛이 일렁이는 공간인 동시에, 그 빛을 바라보던 나의 마음이 잠시 머물렀던 곳을 의미한다. 작품 속 서로 다른 자세의 인체는 내면의 여러 모습을 담아내며, 생각을 내려놓은 뒤 찾아오는 고요함과 그 안에서 달라지는 마음의 상태를 표현한다."
+    ],
+    "images": [
+      {
+        "src": "works/13.jpeg",
+        "alt": "이지예, 빛이 머문 자리",
+        "width": 5568,
+        "height": 3712
+      }
+    ]
+  },
+  {
+    "id": "14",
+    "title": "끝내 남는 것",
+    "artist": "이채영",
+    "specs": "2026, 가변설치",
+    "description": [
+      "기술이 빠르게 발전하는 시대에 인간을 인간답게 만드는 것은 무엇일까. 인간의 많은 능력이 기술로 대체되는 가운데, 누군가를 사랑하고 돌보며 타인의 고통에 마음을 기울이는 감정은 앞으로도 지속될 수 있을까. 이러한 질문은 인간의 탄생과 세대의 이어짐에 대한 관심으로 발전했고, 골반뼈라는 신체 구조를 작업의 출발점으로 삼게 했다.",
+      "골반뼈는 신체를 지탱하는 동시에 탄생과 관계를 떠올리게 하는 구조이다. 초기에는 실제 골반뼈의 형태를 관찰하고 재현하는 데 집중했지만, 점차 그 구조를 새로운 감각으로 경험하도록 하는 데 관심을 갖게 되었다.",
+      "〈What Remains>는 골반뼈의 기본적인 구조를 유지하면서도 세부적인 굴곡을 단순화하고, 곡선과 부피를 부드럽게 변형한 작업이다. 이는 해부학적 대상으로 인식되던 신체 구조를 보다 다정하고 친밀한 감각으로 전환하려는 시도이다.",
+      "이를 통해 탄생과 이어짐, 인간의 관계에 대한 이야기를 직접적으로 설명하기보다 형태가 불러일으키는 감각을 통해 전달하고자 한다."
+    ],
+    "images": [
+      {
+        "src": "works/14.jpeg",
+        "alt": "이채영, 끝내 남는 것",
+        "width": 5568,
+        "height": 3712
+      }
+    ]
+  },
+  {
+    "id": "15",
+    "title": "Love",
+    "artist": "장아란",
+    "specs": "2026, 스테인리스 스틸에 분체도장, 천, 가변설치",
+    "description": [
+      "사랑은 하나의 이름으로 불리지만, 저마다 다른 모습과 관계 속에 존재한다. 나는 그 다양한 감정을 익숙한 단어 ‘LOVE’에서 출발해 입체적인 형태로 옮긴다.",
+      "〈LOVE〉는 LOVE라는 글자를 유기적인 형태로 변형하고, 조각과 벤치의 형식을 연결한 아트퍼니처 작업이다. 정해진 글자의 형태를 벗어나면서도 LOVE라는 의미를 품고 있는 모습은 ‘사랑은 어떤 형태로도 사랑이다’라는 생각과 맞닿아 있다. 텍스트를 입체로 옮기고 몸 가까이에 놓음으로써, 사랑을 눈으로 읽는 단어에서 잠시 머물며 마주할 수 있는 대상으로 제안한다.",
+      "누군가에게 자리를 내어주는 일은 내가 생각하는 사랑의 작은 표현이다. 이 작업 역시 관객에게 자리를 건네는 마음에서 시작되었다. 관객이 자신의 삶 속에서 주고받는 다양한 사랑을 떠올리는 동시에, 내가 이 작품을 통해 건네는 사랑도 느끼기를 바란다. 이 벤치가 사랑을 설명하는 조형물을 넘어, 사랑을 나누는 하나의 방식이 되었으면 한다."
+    ],
+    "images": [
+      {
+        "src": "works/15.jpeg",
+        "alt": "장아란, Love",
+        "width": 5568,
+        "height": 3712
+      }
+    ]
+  },
+  {
+    "id": "16",
+    "title": "포니테일의 언발란스",
+    "artist": "장혜란",
+    "specs": "2026, 느티나무, 머리카락, 테라코타 위에 시유, 단추, 가변설치",
+    "description": [
+      "나는 지금까지 모아 온 기억을 바탕으로 나만의 세계를 만들었습니다.\n기억은  나의 세계가 된다고 할 수 있습니다.\n아주 가끔 어쩌다가 보면 새로운 기억이 나의 세계의 근간을 뒤흔들 때가 있습니다.\n그 순간 세계에는 어떤 방식으로든 변형이 일어납니다.",
+      "이러한 변화는 나와 타인의 관계에서도 마찬가지로 작용합니다. 서로는 상대방의 세계가 어떻게 형성되고 변화하는지 온전히 알 수 없습니다. 타인의 마음을 완전히 이해하거나 나의 마음을 타인에게 온전히 전달하는 일은 끝내 불가능할지도 모릅니다.",
+      "나는 벌목 이후에도 수축과 팽창의 변형을 반복하는 나무의 물리적 변화에 사람이 가진 기억의 가변성을 빗대고 있습니다.\n기억은 고정되어 있지 않고 끊임없이 변하며, 재구성됩니다. 그런데, 모호하게 변형되는 그 \"세계\"라는 것의 운영은 결국 사람이 정신 활동을 유지할 때 까지만 이루어집니다. 세계는 마음 속에서 만들어지고 변형되며, 결국 마음이 멈추는 순간 그 세계도 함께 사라집니다.",
+      "그렇기 때문에 나는 세계가 끝나는 곳은 사람의 마음 속이라고 설명합니다.",
+      "또한 베르나르 베르베르의 소설 <말 없는 친구>에 나오는 '조르주'라는 나무가 나의 이번 작업의 모티브가 되었습니다.\n나무 조르주라는 존재를 통해 나무의 물리적 변화와 사람의 기억, 그리고 한 개인의 마음속에서 생성되고 소멸하는 세계가 어디로 가고 있는가에 대해 생각해보았습니다."
+    ],
+    "images": [
+      {
+        "src": "works/16.jpeg",
+        "alt": "장혜란, 포니테일의 언발란스",
+        "width": 3712,
+        "height": 5568
+      }
+    ]
+  },
+  {
+    "id": "17",
+    "title": "인기척",
+    "artist": "전서희",
+    "specs": "2026, 라돌, 가변설치",
+    "description": [
+      "이 작업은 눈빛에서 시작한다. 몸의 볼륨을 덜어내고 형태를 길게 늘이자, 시선은 자연스럽게 얼굴과 눈동자로 모였다. 나는 설명보다 눈빛이 먼저 말을 걸기를 바랐다.",
+      "몸이 어떤 모양이든, 눈을 마주치는 순간 우리는 그 앞에 한 사람이 있다는 것을 알아챈다. 낯설게 늘어난 팔다리도, 비례에서 벗어난 형상도 눈빛 앞에서는 잠시 뒤로 물러난다. 나는 형태가 흐트러질수록 오히려 눈빛이 더 또렷해진다고 느꼈다.",
+      "두 여성이 등을 맞대고 앉아 있다. 한 사람은 만삭의 몸으로, 한 사람은 한쪽 발에만 하이힐을 신은 채로. 여성의 몸에 따라붙는 기대와 기준에서 조금씩 비껴난 두 몸은, 서로의 얼굴을 보지 못한 채 등에 기대어 무게를 나눈다. 서로를 볼 수 없는 대신, 그들의 눈빛은 바라보는 이를 향해 열려 있다.",
+      "길게 왜곡된 형상 안에는 사실적인 신체 일부를 함께 두었다. 낯선 형태 속에서 익숙한 부분을 발견하는 순간, 우리가 무엇을 익숙하다고 느끼고 무엇을 낯설다고 느끼는지 다시 생각해 보게 된다.",
+      "이 앞에서 무언가를 읽어내기보다, 잠시 그들과 눈을 마주쳐 주었으면 한다.",
+      "insta : @jeonseooi"
+    ],
+    "images": [
+      {
+        "src": "works/17.jpeg",
+        "alt": "전서희, 인기척",
+        "width": 5568,
+        "height": 3712
+      }
+    ]
+  },
+  {
+    "id": "18",
+    "title": "액체적자아",
+    "artist": "정민선",
+    "specs": "2026, PLA, 가변설치",
+    "description": [
+      "관계와 환경에 따라 끊임없이 변화하는 자아를 ‘액체적 자아’로 바라본다. 자아는 고정된 본질이 아니라 사회가 요구하는 역할과 기준을 받아들이고 조정하는 동시에, 때로는 그에 저항하며 자신의 모습을 찾아가는 과정 속에서 형성된다.",
+      "좁은 공간에도 몸을 자유롭게 맞추며 액체처럼 형태를 바꾸는 고양이는 이러한 자아의 유연함을 보여주는 직관적인 매개체다. 작품 속 고양이들은 사회적 역할과 기준을 받아들였다가 다시 밀어내듯 몸을 부풀리고 수축하며, 구체적인 형상에서 점차 흐르는 듯한 덩어리로 변해간다. 둥근 곡면과 뾰족한 형태의 공존은 적응과 저항이 하나의 몸 안에서 동시에 나타나는 상태를 보여준다. 형태가 흐려진 뒤에도 여전히 고양이로 인식되는 모습은 끊임없이 변화하는 가운데 무엇이 우리를 ‘나’로 남게 하는지 묻는다.",
+      "표면을 가로지르는 금색 선은 일본의 수선 기법인 킨츠기에서 착안했다. 이는 변화와 충돌이 남긴 균열과 흔적을 지워야 할 상처가 아니라, 현재의 자아를 이루는 의미 있는 일부로 바라보는 태도를 담고 있다."
+    ],
+    "images": [
+      {
+        "src": "works/18.jpeg",
+        "alt": "정민선, 액체적자아",
+        "width": 5403,
+        "height": 3602
+      }
+    ]
+  },
+  {
+    "id": "19",
+    "title": "Hit the sun",
+    "artist": "전희원",
+    "specs": "2026, PETG, 가변설치",
+    "description": [
+      "나의 작업은 햇빛에 대한 서로 다른 감각과 기억에서 비롯되는 양가적인 감정을 탐구한다.",
+      "맑은 날 햇빛은 주변의 형태와 색을 선명하게 드러내며 상쾌함과 생동감을 불러일으킨다. 반면, 지나치게 강한 햇빛은 원하지 않았던 것까지 드러내는 듯한 불편함을 일으킨다. 특히 어린 시절 경험한 햇빛 알레르기는 햇빛에 대한 부정적인 감각과 기억으로 남아 있다.",
+      "〈Hit the Sun〉은 이러한 개인적인 경험을 바탕으로 햇빛에 대한 끌림과 회피라는 상반된 감정을 다룬다. 햇빛을 향해 다가가려는 마음과 그로부터 벗어나려는 마음은 서로 부딪히며 하나의 감정으로 수렴되지 않는다. 나는 이러한 충돌과 공존의 상태를 시각적·조형적으로 구체화하고자 한다.",
+      "이 작업에서 햇빛은 단순히 밝고 긍정적인 대상이 아니라, 개인의 경험과 기억에 따라 서로 다른 감각과 반응을 불러일으키는 대상이다. 나는 상반된 감정이 하나의 대상 안에서 동시에 존재할 수 있다는 점에 주목한다."
+    ],
+    "images": [
+      {
+        "src": "works/19.jpeg",
+        "alt": "전희원, Hit the sun",
+        "width": 5568,
+        "height": 3712
+      }
+    ]
+  },
+  {
+    "id": "20",
+    "title": "무집착을 향한 집착",
+    "artist": "조여영",
+    "specs": "2026, 세라믹, 가변설치",
+    "description": [
+      "불교에서 무상은 모든 존재가 끊임없이 변화하며 영원히 고정된 상태로 머무를 수 없음을 의미한다. 또한 무집착은 특정한 대상이나 결과에 얽매이지 않는 태도를 뜻한다. 나는 이 두 가지 관점에서 불상이라는 형상을 반복해서 빚는 행위와 그 형상을 완성하려는 마음을 바라보았다.",
+      "다섯 개의 불상은 동일한 형상을 공유하지만, 유약을 입혀 재벌 소성한 것, 초벌 상태로 남긴 것, 밀랍으로 마무리한 것, 흙 본연의 상태를 유지한 것으로 서로 다르게 완성된다. 하나의 형상이 각기 다른 표면과 상태를 지니게 되는 과정은 모든 것이 변화한다는 무상의 의미를 환기한다. 또한 어떤 상태를 완성된 것으로 규정하고 유지하려는 마음이 과연 필요한 것인지 질문하게 한다.",
+      "불상을 반복해서 빚는 행위는 깨달음을 향해 나아가는 수행의 과정과 닮아 있다. 그러나 깨달음에 도달하고자 하는 마음 역시 하나의 목표에 대한 집착이 될 수 있다. 내려놓음을 추구하면서도 그것을 이루려는 마음에 매달리는 모순, 바로 그 지점에서 작업의 질문이 시작된다.",
+      "다섯 개의 불상은 서로 다른 완성의 상태를 보여주지만, 어느 하나만을 궁극적인 형태로 제시하지 않는다. 나는 이 작업을 통해 형상을 완성하고자 하는 마음과 모든 것을 내려놓으려는 마음 사이의 긴장을 탐구한다. 무집착을 향한 노력마저 집착이 될 수 있다면, 진정으로 내려놓는다는 것은 무엇일까. 이 작품은 깨달음에 대한 답을 제시하기보다, 그 답을 얻으려는 마음 자체를 돌아보려는 시도이다."
+    ],
+    "images": [
+      {
+        "src": "works/20.jpeg",
+        "alt": "조여영, 무집착을 향한 집착",
+        "width": 5568,
+        "height": 3712
+      }
+    ]
+  },
+  {
+    "id": "21",
+    "title": "수석 시리즈",
+    "artist": "조혜원",
+    "specs": "2026, 흙, 150*110",
+    "description": [
+      "저는 서로 다른 종류의 흙을 혼합하고 성형하는 공정을 통해 자연이 쌓아 올린 지질학적 시간과 인간이 구축한 조형적 의지가 교차하는 지점을 탐구합니다.",
+      "이번 작업은 오랜 시간 바람과 압력에 의해 형성된 바위와 수석의 외형적 특징 및 특유의 미감을 도자로 재해석하는 것에서 출발했습니다. 자연이 만든 흙 본연의 질감적 깊이와 시간의 압축 방식에서 영감을 받아, 도자라는 매체를 통해 바위가 지닌 광물적 실제성을 직접 구현해 보고자 했습니다.",
+      "작업 과정에서 우연은 시작점일 뿐이며, 결국 인간의 계획된 공정을 거쳐 비로소 하나의 자연이 완성됩니다. 여러 흙이 섞이며 만들어내는 결들은 자연의 물성이지만, 단면을 확장하고 부피를 구축해 나가는 능동적인 행위는 자연의 시간을 비로소 완성시킵니다. 이처럼 자연이 준 우연과 인간의 공정이 마주할 때 발생하는 도자 조형의 가능성을 통해, 흙이라는 재료가 지닌 태고의 질감과 깊이가 만들어내는 새로운 형태의 미학을 보여드리고자 합니다."
+    ],
+    "images": [
+      {
+        "src": "works/21.jpeg",
+        "alt": "조혜원, 수석 시리즈",
+        "width": 5568,
+        "height": 3712
+      }
+    ]
+  },
+  {
+    "id": "22",
+    "title": "Sound of Time, Time of Sound",
+    "artist": "채시원",
+    "specs": "2026, 8채널 사운드, 셀로판지, 책, 함석판, PLA, 가변설치",
+    "description": [
+      "《소리의 시간, 시간의 소리》는 소리를 통해 시간의 흐름과 지각을 다루는 사운드 설치 작업이다.",
+      "전시장 벽에 설치된 8개의 까마귀 머리뼈에서는 전시 기간 동안 일정한 간격으로 숫자를 세는 음성이 재생된다. 숫자가 커짐에 따라, 발화가 끝나기 전에 다음 숫자가 시작되며 음성을 명확하게 식별하기 어려운 순간이 발생하기도 한다.",
+      "공간 중심부에는 두 개의 얇은 철판이 반원형으로 매달려 있으며, 스피커에서 출력되는 저음역대 사운드에 반응해 진동한다. 추락하는 까마귀 모형에서는 에드거 앨런 포의 시 「The Raven」을 연상시키는 생성된 목소리가 문득 문득 등장한다. 숫자를 세는 음성, 까마귀의 생성된 목소리, 철판을 진동시키는 저음은 서로 다른 위치에서 동시에 발생하며 공간에 청각적 상황을 구성한다.",
+      "공간 한편에는 꿈과 기억, 시간과 소리에 관한 글을 담은 책이 놓여 각주로 기능한다. 소리가 시간을 증언하듯, 책을 읽는 행위는 책이라는 물질적 존재를 드러낸다. 독서 행위는 독자의 시간을 사용하며, 책과 독자 사이에 하나의 사건-소리를 발생시킨다."
+    ],
+    "images": [
+      {
+        "src": "works/22.jpeg",
+        "alt": "채시원, Sound of Time, Time of Sound",
+        "width": 5568,
+        "height": 3712
+      }
+    ]
+  }
+];
+function renderWorksGrid(){
+ const grid=document.querySelector(".works-grid");grid.replaceChildren();
+ artworks.forEach((artwork,index)=>{
+  const card=document.createElement("a");card.className="work-card";card.href=`#works/${artwork.id}`;card.setAttribute("aria-label",`${artwork.title} 상세 보기`);
+  const image=artwork.images.find(Boolean);
+  if(image){const img=document.createElement("img");img.src=image.src;img.alt=image.alt||artwork.title;img.loading="lazy";if(image.width&&image.height){img.width=image.width;img.height=image.height}card.append(img)}
+  else{const placeholder=document.createElement("span");placeholder.className="work-image-placeholder";placeholder.append(document.createTextNode(`WORK ${String(index+1).padStart(2,"0")}`));const note=document.createElement("small");note.textContent="이미지 준비 중";placeholder.append(note);card.append(placeholder)}
+  grid.append(card);
+ });
+}
+renderWorksGrid();
 let activeArtwork=null;
 function showWorkImage(index){
  const image=activeArtwork.images[index];
  const frame=document.querySelector('#work-image');
- frame.replaceChildren();
+ frame.replaceChildren();frame.classList.toggle('has-image',Boolean(image));
  if(image){const img=document.createElement('img');img.src=image.src;img.alt=image.alt||activeArtwork.title;frame.append(img);frame.setAttribute('aria-label',img.alt)}
  else{frame.textContent=`${activeArtwork.title} · 이미지 ${index+1} 준비 중`;frame.setAttribute('aria-label',frame.textContent)}
  document.querySelectorAll('#work-thumbnails button').forEach((button,i)=>button.setAttribute('aria-pressed',String(i===index)));
@@ -314,11 +779,12 @@ function renderArtwork(artwork){
  activeArtwork=artwork;
  document.querySelector('#work-title').textContent=`[${artwork.title}]`;
  document.querySelector('#work-artist').textContent=artwork.artist;
+ document.querySelector('#work-artist').hidden=!artwork.artist;
  document.querySelector('#work-specs').textContent=artwork.specs;
- const description=document.querySelector('#work-description');description.replaceChildren();
+ const description=document.querySelector('#work-description');description.replaceChildren();description.hidden=!artwork.description.length;
  artwork.description.forEach(text=>{const p=document.createElement('p');p.textContent=text;description.append(p)});
  const thumbnails=document.querySelector('#work-thumbnails');thumbnails.replaceChildren();
- artwork.images.forEach((image,index)=>{const button=document.createElement('button');button.type='button';button.setAttribute('aria-label',`작품 이미지 ${index+1} 보기`);button.addEventListener('click',()=>showWorkImage(index));if(image){const img=document.createElement('img');img.src=image.src;img.alt='';button.append(img)}else{button.textContent=index+1}thumbnails.append(button)});
+ artwork.images.forEach((image,index)=>{const button=document.createElement('button');button.type='button';button.setAttribute('aria-label',`작품 이미지 ${index+1} 보기`);button.addEventListener('click',()=>showWorkImage(index));button.textContent=index+1;thumbnails.append(button)});
  showWorkImage(0);
 }
 const validViews=['home',...tabs.map(tab=>tab.dataset.view)];
@@ -335,8 +801,41 @@ function render(route){
 
 tabs.forEach((tab,i)=>{tab.addEventListener('click',()=>{location.hash=tab.dataset.view;setMenu(false)});tab.addEventListener('keydown',event=>{let next;if(event.key==='ArrowDown'||event.key==='ArrowRight')next=(i+1)%tabs.length;if(event.key==='ArrowUp'||event.key==='ArrowLeft')next=(i+tabs.length-1)%tabs.length;if(event.key==='Home')next=0;if(event.key==='End')next=tabs.length-1;if(next!==undefined){event.preventDefault();tabs[next].focus();location.hash=tabs[next].dataset.view}})});
 
-// Add the final archive PNG paths here: {src:'images/archive-01.png', alt:'전시 전경'}.
-const archiveImages=Array.from({length:8},()=>null);
+// Exhibition photographs in the supplied archieve folder, ordered 001–008.
+const archiveImages=[
+  {
+    "src": "archieve/KakaoTalk_Photo_2026-11-02-14-53-25 001.jpeg",
+    "alt": "전시 아카이브 사진 01"
+  },
+  {
+    "src": "archieve/KakaoTalk_Photo_2026-11-02-14-53-26 002.jpeg",
+    "alt": "전시 아카이브 사진 02"
+  },
+  {
+    "src": "archieve/KakaoTalk_Photo_2026-11-02-14-53-26 003.jpeg",
+    "alt": "전시 아카이브 사진 03"
+  },
+  {
+    "src": "archieve/KakaoTalk_Photo_2026-11-02-14-53-26 004.jpeg",
+    "alt": "전시 아카이브 사진 04"
+  },
+  {
+    "src": "archieve/KakaoTalk_Photo_2026-11-02-14-53-26 005.jpeg",
+    "alt": "전시 아카이브 사진 05"
+  },
+  {
+    "src": "archieve/KakaoTalk_Photo_2026-11-02-14-53-26 006.jpeg",
+    "alt": "전시 아카이브 사진 06"
+  },
+  {
+    "src": "archieve/KakaoTalk_Photo_2026-11-02-14-53-26 007.jpeg",
+    "alt": "전시 아카이브 사진 07"
+  },
+  {
+    "src": "archieve/KakaoTalk_Photo_2026-11-02-14-53-28 008.jpeg",
+    "alt": "전시 아카이브 사진 08"
+  }
+];
 let archiveIndex=0;
 function showArchive(index){
  archiveIndex=(index+archiveImages.length)%archiveImages.length;
@@ -346,7 +845,7 @@ function showArchive(index){
  document.querySelectorAll('#archive-thumbnails button').forEach((button,i)=>button.setAttribute('aria-pressed',String(i===archiveIndex)));
  document.querySelector('#archive-status').textContent=`${archiveImages.length}개 중 ${archiveIndex+1}번째 이미지`;
 }
-archiveImages.forEach((image,index)=>{const button=document.createElement('button');button.type='button';button.setAttribute('aria-label',`아카이브 ${index+1} 보기`);if(image){const img=document.createElement('img');img.src=image.src;img.alt='';button.append(img)}else{button.textContent=index+1}button.addEventListener('click',()=>showArchive(index));document.querySelector('#archive-thumbnails').append(button)});
+archiveImages.forEach((image,index)=>{const button=document.createElement('button');button.type='button';button.setAttribute('aria-label',`아카이브 ${index+1} 보기`);button.textContent=index+1;button.addEventListener('click',()=>showArchive(index));document.querySelector('#archive-thumbnails').append(button)});
 document.querySelector('#archive-prev').addEventListener('click',()=>showArchive(archiveIndex-1));
 document.querySelector('#archive-next').addEventListener('click',()=>showArchive(archiveIndex+1));
 document.querySelector('.archive-gallery').addEventListener('keydown',event=>{if(event.key==='ArrowLeft'||event.key==='ArrowRight'){event.preventDefault();showArchive(archiveIndex+(event.key==='ArrowRight'?1:-1))}});
